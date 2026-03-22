@@ -1,19 +1,3 @@
-<div align="center">
-
-*I build systems where AI agents ship real products.*
-
-<br>
-
-`Languages` · Python · TypeScript
-
-`AI` · Claude · OpenAI · Gemini · Ollama
-
-`Stack` · React · Flask · Docker
-
-</div>
-
----
-
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com?user=aiedwardyi&theme=github-dark-blue&hide_border=true&background=00000000&stroke=30363d&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff" height="165" />
 </p>
