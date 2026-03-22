@@ -1,5 +1,9 @@
 <div align="center">
 
+*I build systems where AI agents ship real products.*
+
+<br>
+
 `Languages` · Python · TypeScript
 
 `AI` · Claude · OpenAI · Gemini · Ollama
