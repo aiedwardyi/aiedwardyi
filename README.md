@@ -1,12 +1,10 @@
 <div align="center">
 
-`Languages` · Python · TypeScript · JavaScript
+`Languages` · Python · TypeScript
 
-`AI/ML` · Claude · OpenAI · Gemini · Watson · Ollama
+`AI` · Claude · OpenAI · Gemini · Ollama
 
-`Frontend` · React · HTML/CSS
-
-`Backend` · Flask · Node.js · Docker
+`Stack` · React · Flask · Docker
 
 </div>
 
