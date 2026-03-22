@@ -1,3 +1,17 @@
+<div align="center">
+
+`Languages` · Python · TypeScript · JavaScript
+
+`AI/ML` · Claude · OpenAI · Gemini · Watson · Ollama
+
+`Frontend` · React · HTML/CSS
+
+`Backend` · Flask · Node.js · Docker
+
+</div>
+
+---
+
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com?user=aiedwardyi&theme=github-dark-blue&hide_border=true&background=00000000&stroke=30363d&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff" height="165" />
 </p>
