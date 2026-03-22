@@ -14,7 +14,7 @@
 
 ---
 
-### `> cat projects.json`
+### `$ cat projects.json`
 
 ```json
 {
@@ -31,7 +31,7 @@
 }
 ```
 
-### `> neofetch --stack`
+### `$ neofetch --stack`
 
 ```
                     ╭───────────────────────────╮
