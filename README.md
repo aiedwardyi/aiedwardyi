@@ -9,7 +9,7 @@ Previously led a 90+ dev org shipping 200+ products. Now building in public from
 ### What I'm building
 
 - **[Archon](https://github.com/aiedwardyi/archon)** — Multi-agent app delivery platform with versioned artifacts, live preview, eval loops, and governance factsheets
-- **[Claude Usage Monitor](https://github.com/aiedwardyi/claude-usage-monitor)** — Terminal statusline for Claude Code showing quota %, context use, tokens, and reset countdowns
+- **[Claude Usage Monitor](https://github.com/aiedwardyi/claude-usage-monitor)** — Statusline for Claude Code showing 5-hour/7-day quota %, context use, tokens, and reset countdowns in your terminal
 
 ---
 
