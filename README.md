@@ -1,6 +1,10 @@
-<p align="center">
-  <sub>building multi-agent systems, developer tools, and medical ai from seoul</sub>
-</p>
+```text
+focus      multi-agent systems / developer tools / medical ai
+stack      python / typescript / react / flask / docker
+models     claude api / openai / gemini / ollama / ibm watson
+history    led a 90+ dev org / shipped 200+ products
+signal     2,800+ contributions / year
+```
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com?user=aiedwardyi&theme=github-dark-blue&hide_border=true&background=00000000&stroke=30363d&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff" height="165" />
