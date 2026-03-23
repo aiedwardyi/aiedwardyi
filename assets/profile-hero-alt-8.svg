@@ -1,0 +1,78 @@
+<svg width="1200" height="340" viewBox="0 0 1200 340" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Edward Yi orbit panel profile hero</title>
+  <desc id="desc">A cool blue orbit-themed hero for a GitHub profile.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="0.58" stop-color="#111827"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(894 166) scale(260 190)">
+      <stop stop-color="#60A5FA" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="greenGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1048 246) scale(190 120)">
+      <stop stop-color="#6EE7B7" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#6EE7B7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#6EE7B7"/>
+    </linearGradient>
+    <linearGradient id="border" x1="0" y1="0" x2="1200" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA" stop-opacity="0.28"/>
+      <stop offset="0.5" stop-color="#60A5FA" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#6EE7B7" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="340" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="340" rx="28" fill="url(#blueGlow)"/>
+  <rect width="1200" height="340" rx="28" fill="url(#greenGlow)"/>
+
+  <g opacity="0.12">
+    <path d="M0 78H1200" stroke="#334155"/>
+    <path d="M0 146H1200" stroke="#334155"/>
+    <path d="M0 214H1200" stroke="#334155"/>
+    <path d="M0 282H1200" stroke="#334155"/>
+    <path d="M174 0V340" stroke="#334155"/>
+    <path d="M348 0V340" stroke="#334155"/>
+    <path d="M522 0V340" stroke="#334155"/>
+    <path d="M696 0V340" stroke="#334155"/>
+    <path d="M870 0V340" stroke="#334155"/>
+    <path d="M1044 0V340" stroke="#334155"/>
+  </g>
+
+  <rect x="66" y="58" width="78" height="6" rx="3" fill="url(#accent)"/>
+  <text x="66" y="128" fill="#F8FAFC" font-size="60" font-weight="700" font-family="Segoe UI, Arial, sans-serif">Edward Yi</text>
+  <text x="66" y="162" fill="#93C5FD" font-size="18" font-weight="700" letter-spacing="1.5" font-family="Segoe UI, Arial, sans-serif">AI ENGINEER / FOUNDER</text>
+  <text x="66" y="220" fill="#FFFFFF" font-size="34" font-weight="650" font-family="Segoe UI, Arial, sans-serif">building systems where</text>
+  <text x="66" y="258" fill="#FFFFFF" font-size="34" font-weight="650" font-family="Segoe UI, Arial, sans-serif">agents do real work</text>
+  <text x="66" y="302" fill="#9CA3AF" font-size="18" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Seoul  •  Python / TypeScript / React  •  builder-operator</text>
+
+  <circle cx="938" cy="168" r="98" stroke="#60A5FA" stroke-opacity="0.25" stroke-width="2"/>
+  <circle cx="938" cy="168" r="64" stroke="#6EE7B7" stroke-opacity="0.25" stroke-width="2"/>
+  <circle cx="938" cy="168" r="24" fill="#111827" stroke="#374151"/>
+  <circle cx="938" cy="70" r="6" fill="#60A5FA"/>
+  <circle cx="1036" cy="168" r="6" fill="#60A5FA"/>
+  <circle cx="938" cy="232" r="6" fill="#6EE7B7"/>
+  <circle cx="874" cy="168" r="6" fill="#6EE7B7"/>
+  <circle cx="1020" cy="104" r="5" fill="#F8FAFC"/>
+  <circle cx="868" cy="106" r="5" fill="#F8FAFC" opacity="0.6"/>
+
+  <path d="M938 168L1036 168" stroke="#60A5FA" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M938 168L938 232" stroke="#6EE7B7" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M938 168L868 106" stroke="#F8FAFC" stroke-width="2" stroke-linecap="round" opacity="0.44"/>
+
+  <rect x="1018" y="86" width="120" height="38" rx="19" fill="#0F172A" stroke="#334155"/>
+  <rect x="1018" y="148" width="120" height="38" rx="19" fill="#0F172A" stroke="#334155"/>
+  <rect x="1018" y="210" width="120" height="38" rx="19" fill="#0F172A" stroke="#334155"/>
+  <text x="1050" y="110" fill="#F8FAFC" font-size="16" font-weight="600" font-family="Segoe UI, Arial, sans-serif">agents</text>
+  <text x="1054" y="172" fill="#F8FAFC" font-size="16" font-weight="600" font-family="Segoe UI, Arial, sans-serif">tools</text>
+  <text x="1048" y="234" fill="#F8FAFC" font-size="16" font-weight="600" font-family="Segoe UI, Arial, sans-serif">health</text>
+
+  <rect x="0.5" y="0.5" width="1199" height="339" rx="27.5" stroke="url(#border)"/>
+</svg>
