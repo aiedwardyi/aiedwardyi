@@ -63,12 +63,12 @@
   <circle cx="934" cy="160" r="4" fill="#7EE787"/>
   <circle cx="1102" cy="228" r="4" fill="#7EE787"/>
 
-  <rect x="744" y="224" width="104" height="34" rx="17" fill="#111827" stroke="#30363D"/>
-  <rect x="860" y="224" width="112" height="34" rx="17" fill="#111827" stroke="#30363D"/>
-  <rect x="984" y="224" width="112" height="34" rx="17" fill="#111827" stroke="#30363D"/>
-  <text x="772" y="246" fill="#C9D1D9" font-size="15" font-weight="600" font-family="Consolas, 'Courier New', monospace">agents</text>
-  <text x="888" y="246" fill="#C9D1D9" font-size="15" font-weight="600" font-family="Consolas, 'Courier New', monospace">devtools</text>
-  <text x="1018" y="246" fill="#C9D1D9" font-size="15" font-weight="600" font-family="Consolas, 'Courier New', monospace">medical ai</text>
+  <rect x="744" y="224" width="110" height="34" rx="17" fill="#111827" stroke="#30363D"/>
+  <rect x="866" y="224" width="118" height="34" rx="17" fill="#111827" stroke="#30363D"/>
+  <rect x="996" y="224" width="126" height="34" rx="17" fill="#111827" stroke="#30363D"/>
+  <text x="772" y="246" fill="#C9D1D9" font-size="14" font-weight="600" font-family="Consolas, 'Courier New', monospace">agents</text>
+  <text x="894" y="246" fill="#C9D1D9" font-size="14" font-weight="600" font-family="Consolas, 'Courier New', monospace">devtools</text>
+  <text x="1022" y="246" fill="#C9D1D9" font-size="14" font-weight="600" font-family="Consolas, 'Courier New', monospace">medical ai</text>
 
   <rect x="64" y="56" width="76" height="6" rx="3" fill="url(#accent)"/>
   <text x="64" y="122" fill="#F0F6FC" font-size="56" font-weight="700" font-family="Segoe UI, Arial, sans-serif">Edward Yi</text>
@@ -77,10 +77,10 @@
   <text x="64" y="206" fill="#F0F6FC" font-size="30" font-weight="600" font-family="Segoe UI, Arial, sans-serif">building systems where</text>
   <text x="64" y="242" fill="#F0F6FC" font-size="30" font-weight="600" font-family="Segoe UI, Arial, sans-serif">agents do real work</text>
 
-  <rect x="64" y="264" width="168" height="36" rx="18" fill="#0D1117" stroke="#30363D"/>
-  <rect x="244" y="264" width="362" height="36" rx="18" fill="#0D1117" stroke="#30363D"/>
-  <text x="88" y="287" fill="#58A6FF" font-size="15" font-weight="600" font-family="Consolas, 'Courier New', monospace">seoul, south korea</text>
-  <text x="268" y="287" fill="#8B949E" font-size="15" font-weight="600" font-family="Consolas, 'Courier New', monospace">python / typescript / react / flask / docker</text>
+  <rect x="64" y="264" width="196" height="36" rx="18" fill="#0D1117" stroke="#30363D"/>
+  <rect x="272" y="264" width="404" height="36" rx="18" fill="#0D1117" stroke="#30363D"/>
+  <text x="86" y="287" fill="#58A6FF" font-size="14" font-weight="600" font-family="Consolas, 'Courier New', monospace">seoul, south korea</text>
+  <text x="294" y="287" fill="#8B949E" font-size="14" font-weight="600" font-family="Consolas, 'Courier New', monospace">python / typescript / react / flask / docker</text>
 
   <rect x="0.5" y="0.5" width="1199" height="319" rx="23.5" stroke="url(#border)"/>
 </svg>
