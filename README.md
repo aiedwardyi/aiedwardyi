@@ -6,7 +6,6 @@
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com?user=aiedwardyi&theme=github-dark-blue&hide_border=true&background=00000000&stroke=3f3f46&ring=f97316&fire=f97316&currStreakLabel=fdba74" height="160" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aiedwardyi&layout=compact&theme=github_dark&hide_border=true&bg_color=00000000&title_color=f97316&text_color=e5e7eb&langs_count=6" height="160" />
 </p>
 
 <p align="center">
