@@ -49,9 +49,9 @@
   <rect x="66" y="58" width="78" height="6" rx="3" fill="url(#accent)"/>
   <text x="66" y="128" fill="#F8FAFC" font-size="60" font-weight="700" font-family="Segoe UI, Arial, sans-serif">Edward Yi</text>
   <text x="66" y="162" fill="#93C5FD" font-size="18" font-weight="700" letter-spacing="1.5" font-family="Segoe UI, Arial, sans-serif">AI ENGINEER / FOUNDER</text>
-  <text x="66" y="220" fill="#FFFFFF" font-size="34" font-weight="650" font-family="Segoe UI, Arial, sans-serif">building systems where</text>
-  <text x="66" y="258" fill="#FFFFFF" font-size="34" font-weight="650" font-family="Segoe UI, Arial, sans-serif">agents do real work</text>
-  <text x="66" y="302" fill="#9CA3AF" font-size="18" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Seoul  •  Python / TypeScript / React  •  builder-operator</text>
+  <text x="66" y="220" fill="#FFFFFF" font-size="34" font-weight="650" font-family="Segoe UI, Arial, sans-serif">Building systems where</text>
+  <text x="66" y="258" fill="#FFFFFF" font-size="34" font-weight="650" font-family="Segoe UI, Arial, sans-serif">Agents do real work</text>
+  <text x="66" y="302" fill="#9CA3AF" font-size="18" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Seoul  •  Python / TypeScript / React  •  Builder-Operator</text>
 
   <circle cx="938" cy="168" r="98" stroke="#60A5FA" stroke-opacity="0.25" stroke-width="2"/>
   <circle cx="938" cy="168" r="64" stroke="#6EE7B7" stroke-opacity="0.25" stroke-width="2"/>
@@ -70,9 +70,9 @@
   <rect x="1018" y="86" width="120" height="38" rx="19" fill="#0F172A" stroke="#334155"/>
   <rect x="1018" y="148" width="120" height="38" rx="19" fill="#0F172A" stroke="#334155"/>
   <rect x="1018" y="210" width="120" height="38" rx="19" fill="#0F172A" stroke="#334155"/>
-  <text x="1050" y="110" fill="#F8FAFC" font-size="16" font-weight="600" font-family="Segoe UI, Arial, sans-serif">agents</text>
-  <text x="1054" y="172" fill="#F8FAFC" font-size="16" font-weight="600" font-family="Segoe UI, Arial, sans-serif">tools</text>
-  <text x="1048" y="234" fill="#F8FAFC" font-size="16" font-weight="600" font-family="Segoe UI, Arial, sans-serif">health</text>
+  <text x="1048" y="110" fill="#F8FAFC" font-size="16" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Agents</text>
+  <text x="1046" y="172" fill="#F8FAFC" font-size="16" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Devtools</text>
+  <text x="1041" y="234" fill="#F8FAFC" font-size="16" font-weight="600" font-family="Segoe UI, Arial, sans-serif">MedTech</text>
 
   <rect x="0.5" y="0.5" width="1199" height="339" rx="27.5" stroke="url(#border)"/>
 </svg>
