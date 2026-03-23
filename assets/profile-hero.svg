@@ -7,22 +7,22 @@
       <stop offset="0.55" stop-color="#111827"/>
       <stop offset="1" stop-color="#0B1220"/>
     </linearGradient>
-    <radialGradient id="glowBlue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(272 44) rotate(33.4) scale(496.268 228.227)">
+    <radialGradient id="glowBlue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(276 52) rotate(30.6) scale(536.915 255.348)">
       <stop stop-color="#58A6FF" stop-opacity="0.16"/>
       <stop offset="1" stop-color="#58A6FF" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glowGreen" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1040 250) rotate(172.318) scale(264.718 155.104)">
-      <stop stop-color="#7EE787" stop-opacity="0.12"/>
+    <radialGradient id="glowGreen" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1042 246) rotate(176.256) scale(268.278 148.511)">
+      <stop stop-color="#7EE787" stop-opacity="0.11"/>
       <stop offset="1" stop-color="#7EE787" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="accent" x1="48" y1="44" x2="120" y2="44" gradientUnits="userSpaceOnUse">
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop stop-color="#58A6FF"/>
       <stop offset="1" stop-color="#7EE787"/>
     </linearGradient>
     <linearGradient id="border" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#58A6FF" stop-opacity="0.30"/>
+      <stop stop-color="#58A6FF" stop-opacity="0.26"/>
       <stop offset="0.5" stop-color="#58A6FF" stop-opacity="0.08"/>
-      <stop offset="1" stop-color="#7EE787" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7EE787" stop-opacity="0.16"/>
     </linearGradient>
     <filter id="blur">
       <feGaussianBlur stdDeviation="44"/>
@@ -33,54 +33,51 @@
   <rect width="1200" height="320" rx="24" fill="url(#glowBlue)"/>
   <rect width="1200" height="320" rx="24" fill="url(#glowGreen)"/>
 
-  <rect x="718" y="40" width="418" height="240" rx="24" fill="#0F172A" fill-opacity="0.72" stroke="#1F2937"/>
+  <rect x="58" y="48" width="72" height="6" rx="3" fill="url(#accent)"/>
+  <text x="58" y="112" fill="#F0F6FC" font-size="60" font-weight="700" font-family="Segoe UI, Arial, sans-serif">Edward Yi</text>
+  <text x="58" y="144" fill="#8B949E" font-size="18" font-weight="600" letter-spacing="1.4" font-family="Segoe UI, Arial, sans-serif">AI ENGINEER / FOUNDER</text>
 
-  <g opacity="0.10">
-    <path d="M742 88H1112" stroke="#334155"/>
-    <path d="M742 136H1112" stroke="#334155"/>
-    <path d="M742 184H1112" stroke="#334155"/>
-    <path d="M742 232H1112" stroke="#334155"/>
-    <path d="M790 64V256" stroke="#334155"/>
-    <path d="M862 64V256" stroke="#334155"/>
-    <path d="M934 64V256" stroke="#334155"/>
-    <path d="M1006 64V256" stroke="#334155"/>
-    <path d="M1078 64V256" stroke="#334155"/>
+  <text x="58" y="198" fill="#F0F6FC" font-size="34" font-weight="650" font-family="Segoe UI, Arial, sans-serif">building systems where</text>
+  <text x="58" y="236" fill="#F0F6FC" font-size="34" font-weight="650" font-family="Segoe UI, Arial, sans-serif">agents do real work</text>
+
+  <text x="58" y="280" fill="#58A6FF" font-size="18" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Seoul, South Korea</text>
+  <text x="238" y="280" fill="#8B949E" font-size="18" font-weight="600" font-family="Segoe UI, Arial, sans-serif">• Python / TypeScript / React</text>
+
+  <rect x="718" y="44" width="420" height="232" rx="24" fill="#0F172A" fill-opacity="0.72" stroke="#1F2937"/>
+
+  <g opacity="0.12">
+    <path d="M746 88H1110" stroke="#334155"/>
+    <path d="M746 132H1110" stroke="#334155"/>
+    <path d="M746 176H1110" stroke="#334155"/>
+    <path d="M746 220H1110" stroke="#334155"/>
+    <path d="M806 68V244" stroke="#334155"/>
+    <path d="M880 68V244" stroke="#334155"/>
+    <path d="M954 68V244" stroke="#334155"/>
+    <path d="M1028 68V244" stroke="#334155"/>
   </g>
 
-  <circle cx="1006" cy="110" r="88" fill="#58A6FF" opacity="0.14" filter="url(#blur)"/>
-  <circle cx="1092" cy="220" r="72" fill="#7EE787" opacity="0.10" filter="url(#blur)"/>
+  <circle cx="1000" cy="102" r="88" fill="#58A6FF" opacity="0.13" filter="url(#blur)"/>
+  <circle cx="1092" cy="224" r="70" fill="#7EE787" opacity="0.10" filter="url(#blur)"/>
 
-  <text x="744" y="74" fill="#8B949E" font-size="13" font-weight="600" letter-spacing="1.6" font-family="Segoe UI, Arial, sans-serif">FOCUS</text>
+  <text x="748" y="78" fill="#8B949E" font-size="15" font-weight="600" letter-spacing="1.2" font-family="Segoe UI, Arial, sans-serif">FOCUS AREAS</text>
 
-  <path d="M752 176C808 110 870 78 934 82C996 86 1052 126 1106 196" stroke="#58A6FF" stroke-width="2.5" stroke-linecap="round" opacity="0.95"/>
-  <path d="M752 208C810 176 872 156 934 160C992 164 1050 194 1102 228" stroke="#7EE787" stroke-width="2" stroke-linecap="round" opacity="0.74"/>
-  <path d="M752 140C812 102 876 94 936 108C994 122 1054 162 1108 214" stroke="#C9D1D9" stroke-width="1.75" stroke-linecap="round" opacity="0.24"/>
+  <path d="M760 182C824 112 886 78 952 82C1014 86 1070 126 1122 190" stroke="#58A6FF" stroke-width="3" stroke-linecap="round" opacity="0.96"/>
+  <path d="M760 212C822 182 884 164 946 166C1006 168 1064 194 1116 226" stroke="#7EE787" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+  <path d="M760 146C822 108 886 102 948 114C1006 126 1068 164 1120 212" stroke="#C9D1D9" stroke-width="2" stroke-linecap="round" opacity="0.2"/>
 
-  <circle cx="752" cy="176" r="5" fill="#58A6FF"/>
-  <circle cx="934" cy="82" r="5" fill="#58A6FF"/>
-  <circle cx="1106" cy="196" r="5" fill="#58A6FF"/>
-  <circle cx="810" cy="176" r="4" fill="#7EE787"/>
-  <circle cx="934" cy="160" r="4" fill="#7EE787"/>
-  <circle cx="1102" cy="228" r="4" fill="#7EE787"/>
+  <circle cx="760" cy="182" r="5" fill="#58A6FF"/>
+  <circle cx="952" cy="82" r="5" fill="#58A6FF"/>
+  <circle cx="1122" cy="190" r="5" fill="#58A6FF"/>
+  <circle cx="818" cy="184" r="4.5" fill="#7EE787"/>
+  <circle cx="948" cy="166" r="4.5" fill="#7EE787"/>
+  <circle cx="1116" cy="226" r="4.5" fill="#7EE787"/>
 
-  <rect x="744" y="224" width="110" height="34" rx="17" fill="#111827" stroke="#30363D"/>
-  <rect x="866" y="224" width="118" height="34" rx="17" fill="#111827" stroke="#30363D"/>
-  <rect x="996" y="224" width="112" height="34" rx="17" fill="#111827" stroke="#30363D"/>
-  <text x="772" y="246" fill="#C9D1D9" font-size="14" font-weight="600" font-family="Consolas, 'Courier New', monospace">agents</text>
-  <text x="894" y="246" fill="#C9D1D9" font-size="14" font-weight="600" font-family="Consolas, 'Courier New', monospace">devtools</text>
-  <text x="1022" y="246" fill="#C9D1D9" font-size="14" font-weight="600" font-family="Consolas, 'Courier New', monospace">med ai</text>
-
-  <rect x="64" y="56" width="76" height="6" rx="3" fill="url(#accent)"/>
-  <text x="64" y="122" fill="#F0F6FC" font-size="56" font-weight="700" font-family="Segoe UI, Arial, sans-serif">Edward Yi</text>
-  <text x="64" y="152" fill="#8B949E" font-size="16" font-weight="600" letter-spacing="1.8" font-family="Segoe UI, Arial, sans-serif">AI ENGINEER / FOUNDER</text>
-
-  <text x="64" y="206" fill="#F0F6FC" font-size="30" font-weight="600" font-family="Segoe UI, Arial, sans-serif">building systems where</text>
-  <text x="64" y="242" fill="#F0F6FC" font-size="30" font-weight="600" font-family="Segoe UI, Arial, sans-serif">agents do real work</text>
-
-  <rect x="64" y="264" width="196" height="36" rx="18" fill="#0D1117" stroke="#30363D"/>
-  <rect x="272" y="264" width="334" height="36" rx="18" fill="#0D1117" stroke="#30363D"/>
-  <text x="86" y="287" fill="#58A6FF" font-size="14" font-weight="600" font-family="Consolas, 'Courier New', monospace">seoul, south korea</text>
-  <text x="294" y="287" fill="#8B949E" font-size="14" font-weight="600" font-family="Consolas, 'Courier New', monospace">python / typescript / react</text>
+  <rect x="760" y="220" width="102" height="36" rx="18" fill="#111827" stroke="#30363D"/>
+  <rect x="874" y="220" width="90" height="36" rx="18" fill="#111827" stroke="#30363D"/>
+  <rect x="976" y="220" width="100" height="36" rx="18" fill="#111827" stroke="#30363D"/>
+  <text x="790" y="243" fill="#C9D1D9" font-size="16" font-weight="600" font-family="Segoe UI, Arial, sans-serif">agents</text>
+  <text x="903" y="243" fill="#C9D1D9" font-size="16" font-weight="600" font-family="Segoe UI, Arial, sans-serif">tools</text>
+  <text x="1006" y="243" fill="#C9D1D9" font-size="16" font-weight="600" font-family="Segoe UI, Arial, sans-serif">health</text>
 
   <rect x="0.5" y="0.5" width="1199" height="319" rx="23.5" stroke="url(#border)"/>
 </svg>
