@@ -1,0 +1,72 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Edward Yi profile hero</title>
+  <desc id="desc">Static hero image for GitHub profile README.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1117"/>
+      <stop offset="0.55" stop-color="#111827"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#58A6FF"/>
+      <stop offset="1" stop-color="#7EE787"/>
+    </linearGradient>
+    <linearGradient id="soft" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#58A6FF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#58A6FF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="36"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="320" rx="24" fill="url(#bg)"/>
+
+  <g opacity="0.2">
+    <path d="M0 74H1200" stroke="#1F2937"/>
+    <path d="M0 138H1200" stroke="#1F2937"/>
+    <path d="M0 202H1200" stroke="#1F2937"/>
+    <path d="M0 266H1200" stroke="#1F2937"/>
+    <path d="M160 0V320" stroke="#1F2937"/>
+    <path d="M320 0V320" stroke="#1F2937"/>
+    <path d="M480 0V320" stroke="#1F2937"/>
+    <path d="M640 0V320" stroke="#1F2937"/>
+    <path d="M800 0V320" stroke="#1F2937"/>
+    <path d="M960 0V320" stroke="#1F2937"/>
+  </g>
+
+  <circle cx="920" cy="74" r="94" fill="#58A6FF" opacity="0.12" filter="url(#blur)"/>
+  <circle cx="1080" cy="256" r="80" fill="#7EE787" opacity="0.08" filter="url(#blur)"/>
+
+  <path d="M740 92C802 36 898 28 980 62C1035 86 1075 132 1100 178" stroke="#58A6FF" stroke-width="2" opacity="0.45"/>
+  <path d="M764 128C824 84 901 80 966 108C1022 132 1065 181 1084 224" stroke="#7EE787" stroke-width="2" opacity="0.3"/>
+  <path d="M790 168C842 138 900 138 950 156C998 174 1048 212 1066 246" stroke="#C9D1D9" stroke-width="2" opacity="0.22"/>
+
+  <circle cx="740" cy="92" r="6" fill="#58A6FF"/>
+  <circle cx="980" cy="62" r="6" fill="#58A6FF"/>
+  <circle cx="1100" cy="178" r="6" fill="#58A6FF"/>
+  <circle cx="764" cy="128" r="5" fill="#7EE787"/>
+  <circle cx="966" cy="108" r="5" fill="#7EE787"/>
+  <circle cx="1084" cy="224" r="5" fill="#7EE787"/>
+
+  <rect x="64" y="56" width="72" height="6" rx="3" fill="url(#accent)"/>
+  <text x="64" y="122" fill="#F0F6FC" font-size="56" font-weight="700" font-family="Segoe UI, Arial, sans-serif">Edward Yi</text>
+  <text x="64" y="156" fill="#8B949E" font-size="24" font-weight="500" font-family="Segoe UI, Arial, sans-serif">AI Engineer &amp; Founder</text>
+
+  <text x="64" y="208" fill="#C9D1D9" font-size="26" font-weight="500" font-family="Segoe UI, Arial, sans-serif">
+    Building multi-agent systems, developer tools, and medical AI.
+  </text>
+
+  <rect x="64" y="236" width="454" height="44" rx="22" fill="#0D1117" stroke="#30363D"/>
+  <text x="88" y="264" fill="#58A6FF" font-size="18" font-weight="600" font-family="Consolas, 'Courier New', monospace">Seoul</text>
+  <text x="152" y="264" fill="#8B949E" font-size="18" font-weight="500" font-family="Consolas, 'Courier New', monospace">/ python / typescript / react / flask / docker</text>
+
+  <rect x="742" y="214" width="164" height="42" rx="12" fill="#111827" stroke="#30363D"/>
+  <rect x="920" y="214" width="136" height="42" rx="12" fill="#111827" stroke="#30363D"/>
+  <rect x="1070" y="214" width="92" height="42" rx="12" fill="#111827" stroke="#30363D"/>
+  <text x="768" y="241" fill="#C9D1D9" font-size="16" font-weight="600" font-family="Consolas, 'Courier New', monospace">multi-agent</text>
+  <text x="946" y="241" fill="#C9D1D9" font-size="16" font-weight="600" font-family="Consolas, 'Courier New', monospace">devtools</text>
+  <text x="1094" y="241" fill="#C9D1D9" font-size="16" font-weight="600" font-family="Consolas, 'Courier New', monospace">med ai</text>
+
+  <rect x="0.5" y="0.5" width="1199" height="319" rx="23.5" stroke="url(#soft)"/>
+</svg>
