@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/profile-hero-alt-8b.svg" width="100%" alt="Edward Yi orbit panel profile hero" />
+  <img src="./assets/profile-hero-alt-8c.svg" width="100%" alt="Edward Yi orbit panel profile hero" />
 </p>
 
 <p align="center">
