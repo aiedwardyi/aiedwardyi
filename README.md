@@ -1,5 +1,11 @@
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:58a6ff&height=170&section=header&text=Edward%20Yi&fontSize=36&fontColor=ffffff&fontAlignY=38&desc=AI%20Engineer%20%26%20Founder%20%E2%80%A2%20Seoul&descSize=15&descColor=c9d1d9&descAlignY=60&animation=fadeIn" />
+
 <p align="center">
-  <img src="./assets/profile-hero.svg" width="100%" alt="Edward Yi profile hero" />
+  <strong>Building systems where agents do real work.</strong>
+</p>
+
+<p align="center">
+  <sub>multi-agent systems · developer tools · medical ai</sub>
 </p>
 
 <p align="center">
@@ -9,3 +15,9 @@
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=aiedwardyi&theme=github-dark&hide_border=true&bg_color=00000000&color=58a6ff&line=58a6ff&point=c9d1d9&area=true&area_color=58a6ff" width="95%" />
 </p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aiedwardyi&layout=compact&theme=github_dark&hide_border=true&bg_color=00000000&title_color=58a6ff&text_color=c9d1d9&langs_count=6" height="150" />
+</p>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:58a6ff&height=90&section=footer" />
