@@ -3,9 +3,17 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=aiedwardyi&theme=github-dark-blue&hide_border=true&background=00000000&stroke=1f2937&ring=38bdf8&fire=22d3ee&currStreakLabel=7dd3fc" height="188" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=aiedwardyi&theme=github-dark-blue&hide_border=true&background=00000000&stroke=30363d&ring=38bdf8&fire=22d3ee&currStreakNum=f0f6fc&sideNums=58a6ff&currStreakLabel=7dd3fc&sideLabels=8b949e&dates=8b949e" />
+    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="https://streak-stats.demolab.com?user=aiedwardyi&theme=default&hide_border=true&background=00000000&stroke=d0d7de&ring=0969da&fire=1f6feb&currStreakNum=24292f&sideNums=0969da&currStreakLabel=0969da&sideLabels=57606a&dates=57606a" />
+    <img src="https://streak-stats.demolab.com?user=aiedwardyi&theme=default&hide_border=true&background=00000000&stroke=d0d7de&ring=0969da&fire=1f6feb&currStreakNum=24292f&sideNums=0969da&currStreakLabel=0969da&sideLabels=57606a&dates=57606a" height="188" alt="Edward Yi GitHub streak stats" />
+  </picture>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=aiedwardyi&theme=github-dark&hide_border=true&bg_color=00000000&color=dbeafe&line=38bdf8&point=7dd3fc&area=true&area_color=0ea5e9" width="94%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=aiedwardyi&theme=github-dark&hide_border=true&bg_color=00000000&color=c9d1d9&title_color=7dd3fc&line=38bdf8&point=7dd3fc&area=true&area_color=0ea5e9" />
+    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=aiedwardyi&theme=github-compact&hide_border=true&bg_color=00000000&color=57606a&title_color=0969da&line=0969da&point=1f6feb&area=true&area_color=54aeff" />
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=aiedwardyi&theme=github-compact&hide_border=true&bg_color=00000000&color=57606a&title_color=0969da&line=0969da&point=1f6feb&area=true&area_color=54aeff" width="94%" alt="Edward Yi GitHub contribution activity graph" />
+  </picture>
 </p>
