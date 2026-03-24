@@ -87,22 +87,22 @@
   <g class="float">
     <rect x="820" y="66" width="324" height="92" rx="22" fill="url(#soft)" stroke="#1B3048"/>
     <text x="848" y="93" fill="#8CB7D8" font-size="13" font-weight="700" letter-spacing="2">RELEASE VELOCITY</text>
-    <text x="848" y="121" fill="#F8FBFF" font-size="26" font-weight="700">2.8k+ / year</text>
+    <text x="848" y="119" fill="#F8FBFF" font-size="24" font-weight="700">2.8k+ / year</text>
     <text x="848" y="142" fill="#7DD3FC" font-size="15" font-weight="700">active contributions</text>
   </g>
 
   <g class="float" style="animation-delay: -1.2s;">
     <rect x="820" y="168" width="324" height="92" rx="22" fill="url(#soft)" stroke="#1B3048"/>
     <text x="848" y="195" fill="#8CB7D8" font-size="13" font-weight="700" letter-spacing="2">CURRENT SIGNAL</text>
-    <text x="848" y="223" fill="#F8FBFF" font-size="26" font-weight="700">37 day streak</text>
+    <text x="848" y="221" fill="#F8FBFF" font-size="24" font-weight="700">37 day streak</text>
     <text x="848" y="244" fill="#7DD3FC" font-size="15" font-weight="700">shipping daily</text>
   </g>
 
   <g class="float" style="animation-delay: -2.2s;">
     <rect x="820" y="270" width="324" height="96" rx="22" fill="url(#soft)" stroke="#1B3048"/>
     <text x="848" y="297" fill="#8CB7D8" font-size="13" font-weight="700" letter-spacing="2">OPERATOR RANGE</text>
-    <text x="848" y="323" fill="#F8FBFF" font-size="26" font-weight="700">90+ dev org</text>
-    <text x="848" y="349" fill="#F8FBFF" font-size="26" font-weight="700">200+ products</text>
+    <text x="848" y="319" fill="#F8FBFF" font-size="24" font-weight="700">90+ dev org</text>
+    <text x="848" y="344" fill="#F8FBFF" font-size="24" font-weight="700">200+ products</text>
   </g>
 
   <circle cx="928" cy="118" r="108" fill="#22D3EE" opacity="0.08" filter="url(#blur)"/>
