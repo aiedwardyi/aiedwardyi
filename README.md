@@ -3,8 +3,11 @@
 </p>
 
 <p align="center">
-  <img src="./assets/profile-streak-dark.png#gh-dark-mode-only" height="188" alt="Edward Yi GitHub streak stats dark" />
-  <img src="./assets/profile-streak-light.png#gh-light-mode-only" height="188" alt="Edward Yi GitHub streak stats light" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-streak-dark.png" />
+    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="./assets/profile-streak-light.png" />
+    <img src="./assets/profile-streak-light.png" height="188" alt="Edward Yi GitHub streak stats" />
+  </picture>
 </p>
 
 <p align="center">
