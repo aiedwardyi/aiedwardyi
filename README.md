@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="./assets/profile-hero-alt-9g.svg" width="100%" alt="Edward Yi editorial grid profile hero" />
+  <img src="./assets/profile-hero-alt-8d.svg" width="98%" alt="Edward Yi orbit panel profile hero" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=aiedwardyi&theme=github-dark-blue&hide_border=true&background=00000000&stroke=2a2417&ring=c9a84c&fire=c9a84c&currStreakLabel=e2c87a&sideNums=e8e8e8&currStreakNum=e8e8e8&sideLabels=999999&dates=999999" height="165" />
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=aiedwardyi&theme=github-dark-blue&hide_border=true&background=00000000&stroke=30363d&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff" height="182" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=aiedwardyi&bg_color=00000000&color=e8e8e8&line=c9a84c&point=e2c87a&area=true&area_color=c9a84c&hide_border=true" width="96%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=aiedwardyi&theme=github-dark&hide_border=true&bg_color=00000000&color=58a6ff&line=58a6ff&point=c9d1d9&area=true&area_color=58a6ff" width="94%" />
 </p>
