@@ -75,9 +75,9 @@
   <rect x="54" y="320" width="180" height="38" rx="19" fill="#0B1626" stroke="#233A59"/>
   <rect x="248" y="320" width="164" height="38" rx="19" fill="#0B1626" stroke="#233A59"/>
   <rect x="426" y="320" width="146" height="38" rx="19" fill="#0B1626" stroke="#233A59"/>
-  <text x="144" y="345" text-anchor="middle" fill="#DBF5FF" font-size="16" font-weight="700">Multi-Agent Systems</text>
-  <text x="330" y="345" text-anchor="middle" fill="#DBF5FF" font-size="16" font-weight="700">Developer Tools</text>
-  <text x="499" y="345" text-anchor="middle" fill="#DBF5FF" font-size="16" font-weight="700">MedTech AI</text>
+  <text x="144" y="345" text-anchor="middle" fill="#DBF5FF" font-size="14" font-weight="700">Multi-Agent Systems</text>
+  <text x="330" y="345" text-anchor="middle" fill="#DBF5FF" font-size="14" font-weight="700">Developer Tools</text>
+  <text x="499" y="345" text-anchor="middle" fill="#DBF5FF" font-size="14" font-weight="700">MedTech AI</text>
 
   <path class="dash" d="M548 130C608 118 664 118 720 142C768 162 804 168 852 162" stroke="#38BDF8" stroke-width="2"/>
   <circle class="pulse" cx="716" cy="141" r="6" fill="#22D3EE"/>
@@ -86,23 +86,23 @@
 
   <g class="float">
     <rect x="820" y="66" width="324" height="92" rx="22" fill="url(#soft)" stroke="#1B3048"/>
-    <text x="848" y="94" fill="#8CB7D8" font-size="14" font-weight="700" letter-spacing="2">RELEASE VELOCITY</text>
-    <text x="848" y="124" fill="#F8FBFF" font-size="30" font-weight="700">2.8k+ / year</text>
-    <text x="848" y="144" fill="#7DD3FC" font-size="16" font-weight="700">active contributions</text>
+    <text x="848" y="93" fill="#8CB7D8" font-size="13" font-weight="700" letter-spacing="2">RELEASE VELOCITY</text>
+    <text x="848" y="121" fill="#F8FBFF" font-size="26" font-weight="700">2.8k+ / year</text>
+    <text x="848" y="142" fill="#7DD3FC" font-size="15" font-weight="700">active contributions</text>
   </g>
 
   <g class="float" style="animation-delay: -1.2s;">
     <rect x="820" y="168" width="324" height="92" rx="22" fill="url(#soft)" stroke="#1B3048"/>
-    <text x="848" y="196" fill="#8CB7D8" font-size="14" font-weight="700" letter-spacing="2">CURRENT SIGNAL</text>
-    <text x="848" y="226" fill="#F8FBFF" font-size="30" font-weight="700">37 day streak</text>
-    <text x="848" y="246" fill="#7DD3FC" font-size="16" font-weight="700">shipping daily</text>
+    <text x="848" y="195" fill="#8CB7D8" font-size="13" font-weight="700" letter-spacing="2">CURRENT SIGNAL</text>
+    <text x="848" y="223" fill="#F8FBFF" font-size="26" font-weight="700">37 day streak</text>
+    <text x="848" y="244" fill="#7DD3FC" font-size="15" font-weight="700">shipping daily</text>
   </g>
 
   <g class="float" style="animation-delay: -2.2s;">
     <rect x="820" y="270" width="324" height="96" rx="22" fill="url(#soft)" stroke="#1B3048"/>
-    <text x="848" y="298" fill="#8CB7D8" font-size="14" font-weight="700" letter-spacing="2">OPERATOR RANGE</text>
-    <text x="848" y="328" fill="#F8FBFF" font-size="30" font-weight="700">90+ dev org</text>
-    <text x="848" y="354" fill="#F8FBFF" font-size="30" font-weight="700">200+ products</text>
+    <text x="848" y="297" fill="#8CB7D8" font-size="13" font-weight="700" letter-spacing="2">OPERATOR RANGE</text>
+    <text x="848" y="323" fill="#F8FBFF" font-size="26" font-weight="700">90+ dev org</text>
+    <text x="848" y="349" fill="#F8FBFF" font-size="26" font-weight="700">200+ products</text>
   </g>
 
   <circle cx="928" cy="118" r="108" fill="#22D3EE" opacity="0.08" filter="url(#blur)"/>
