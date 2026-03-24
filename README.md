@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/profile-hero-alt-9b.svg" width="100%" alt="Edward Yi editorial grid profile hero" />
+  <img src="./assets/profile-hero-alt-9c.svg" width="100%" alt="Edward Yi editorial grid profile hero" />
 </p>
 
 <p align="center">
