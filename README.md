@@ -3,11 +3,8 @@
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=aiedwardyi&theme=github-dark-blue&hide_border=true&background=00000000&stroke=30363d&ring=38bdf8&fire=22d3ee&currStreakNum=f0f6fc&sideNums=58a6ff&currStreakLabel=7dd3fc&sideLabels=8b949e&dates=8b949e&disable_animations=true&type=png&v=4" />
-    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="https://streak-stats.demolab.com?user=aiedwardyi&theme=default&hide_border=false&background=ffffff&border=d0d7de&stroke=d0d7de&ring=0550ae&fire=0550ae&currStreakNum=0969da&sideNums=0969da&currStreakLabel=0550ae&sideLabels=57606a&dates=57606a&disable_animations=true&type=png&v=4" />
-    <img src="https://streak-stats.demolab.com?user=aiedwardyi&theme=default&hide_border=false&background=ffffff&border=d0d7de&stroke=d0d7de&ring=0550ae&fire=0550ae&currStreakNum=0969da&sideNums=0969da&currStreakLabel=0550ae&sideLabels=57606a&dates=57606a&disable_animations=true&type=png&v=4" height="188" alt="Edward Yi GitHub streak stats" />
-  </picture>
+  <img src="./assets/profile-streak-dark.png#gh-dark-mode-only" height="188" alt="Edward Yi GitHub streak stats dark" />
+  <img src="./assets/profile-streak-light.png#gh-light-mode-only" height="188" alt="Edward Yi GitHub streak stats light" />
 </p>
 
 <p align="center">
