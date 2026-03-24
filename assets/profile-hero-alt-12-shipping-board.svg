@@ -5,15 +5,10 @@
     text { font-family: "Segoe UI", Arial, sans-serif; }
     .mono { font-family: Consolas, "SFMono-Regular", monospace; }
     .pulse { animation: pulse 4s ease-in-out infinite; transform-origin: center; }
-    .float { animation: float 6s ease-in-out infinite; }
     .dash { stroke-dasharray: 10 18; animation: dash 18s linear infinite; }
     @keyframes pulse {
       0%, 100% { opacity: 0.38; }
       50% { opacity: 0.9; }
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
     }
     @keyframes dash {
       from { stroke-dashoffset: 0; }
@@ -74,21 +69,21 @@
   <circle class="pulse" cx="852" cy="162" r="6" fill="#38BDF8"/>
   <circle class="pulse" cx="603" cy="124" r="5" fill="#CFFAFE"/>
 
-  <g class="float">
+  <g>
     <rect x="820" y="66" width="324" height="92" rx="22" fill="url(#soft)" stroke="#1B3048"/>
     <text x="848" y="93" fill="#8CB7D8" font-size="13" font-weight="700" letter-spacing="2">RELEASE VELOCITY</text>
     <text x="848" y="119" fill="#F8FBFF" font-size="24" font-weight="700">2.8k+ / year</text>
     <text x="848" y="142" fill="#7DD3FC" font-size="15" font-weight="700">active contributions</text>
   </g>
 
-  <g class="float" style="animation-delay: -1.2s;">
+  <g>
     <rect x="820" y="168" width="324" height="92" rx="22" fill="url(#soft)" stroke="#1B3048"/>
     <text x="848" y="195" fill="#8CB7D8" font-size="13" font-weight="700" letter-spacing="2">CURRENT SIGNAL</text>
     <text x="848" y="221" fill="#F8FBFF" font-size="24" font-weight="700">37 day streak</text>
     <text x="848" y="244" fill="#7DD3FC" font-size="15" font-weight="700">shipping daily</text>
   </g>
 
-  <g class="float" style="animation-delay: -2.2s;">
+  <g>
     <rect x="820" y="270" width="324" height="96" rx="22" fill="url(#soft)" stroke="#1B3048"/>
     <text x="848" y="297" fill="#8CB7D8" font-size="13" font-weight="700" letter-spacing="2">OPERATOR RANGE</text>
     <text x="848" y="319" fill="#F8FBFF" font-size="24" font-weight="700">90+ dev org</text>
