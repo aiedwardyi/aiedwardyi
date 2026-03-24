@@ -1,0 +1,110 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Edward Yi shipping board profile hero</title>
+  <desc id="desc">A dynamic shipping board inspired hero with animated signal lines and product cards.</desc>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; }
+    .mono { font-family: Consolas, "SFMono-Regular", monospace; }
+    .pulse { animation: pulse 4s ease-in-out infinite; transform-origin: center; }
+    .float { animation: float 6s ease-in-out infinite; }
+    .scan { animation: scan 8s linear infinite; }
+    .dash { stroke-dasharray: 10 18; animation: dash 18s linear infinite; }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.38; }
+      50% { opacity: 0.9; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes scan {
+      0% { transform: translateX(-260px); opacity: 0; }
+      15% { opacity: 0.22; }
+      75% { opacity: 0.08; }
+      100% { transform: translateX(1260px); opacity: 0; }
+    }
+    @keyframes dash {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: -380; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050914"/>
+      <stop offset="0.55" stop-color="#071323"/>
+      <stop offset="1" stop-color="#0B1728"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="soft" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#15253B"/>
+      <stop offset="1" stop-color="#0C1626"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(892 164) rotate(90) scale(188 264)">
+      <stop stop-color="#22D3EE" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" rx="32" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="32" fill="url(#glow)"/>
+
+  <g opacity="0.12">
+    <path d="M98 0V420" stroke="#29415F"/>
+    <path d="M516 0V420" stroke="#29415F"/>
+    <path d="M782 0V420" stroke="#29415F"/>
+    <path d="M0 94H1200" stroke="#29415F"/>
+    <path d="M0 290H1200" stroke="#29415F"/>
+  </g>
+
+  <rect class="scan" x="-180" y="0" width="180" height="420" fill="url(#accent)" opacity="0.05"/>
+  <rect class="scan" x="-300" y="0" width="56" height="420" fill="#A5F3FC" opacity="0.07"/>
+
+  <text x="54" y="56" fill="#8CB7D8" font-size="14" font-weight="700" letter-spacing="2.4">AIEDWARDYI / SHIPPING BOARD</text>
+  <rect x="54" y="74" width="110" height="5" rx="2.5" fill="url(#accent)"/>
+
+  <text x="54" y="144" fill="#E6F4FF" font-size="64" font-weight="700">Edward Yi</text>
+  <text x="54" y="190" fill="#9FB5CC" font-size="19" font-weight="600" letter-spacing="1.6">AI ENGINEER / FOUNDER / SEOUL</text>
+  <text x="54" y="244" fill="#F8FBFF" font-size="34" font-weight="650">Building systems where agents</text>
+  <text x="54" y="282" fill="#F8FBFF" font-size="34" font-weight="650">ship real work into production</text>
+
+  <rect x="54" y="320" width="168" height="38" rx="19" fill="#0B1626" stroke="#233A59"/>
+  <rect x="236" y="320" width="158" height="38" rx="19" fill="#0B1626" stroke="#233A59"/>
+  <rect x="408" y="320" width="140" height="38" rx="19" fill="#0B1626" stroke="#233A59"/>
+  <text x="84" y="345" fill="#DBF5FF" font-size="16" font-weight="700">multi-agent systems</text>
+  <text x="275" y="345" fill="#DBF5FF" font-size="16" font-weight="700">developer tools</text>
+  <text x="450" y="345" fill="#DBF5FF" font-size="16" font-weight="700">medtech ai</text>
+
+  <path class="dash" d="M548 130C608 118 664 118 720 142C768 162 804 168 852 162" stroke="#38BDF8" stroke-width="2"/>
+  <circle class="pulse" cx="716" cy="141" r="6" fill="#22D3EE"/>
+  <circle class="pulse" cx="852" cy="162" r="6" fill="#38BDF8"/>
+  <circle class="pulse" cx="603" cy="124" r="5" fill="#CFFAFE"/>
+
+  <g class="float">
+    <rect x="820" y="66" width="324" height="92" rx="22" fill="url(#soft)" stroke="#1B3048"/>
+    <text x="848" y="98" fill="#8CB7D8" font-size="14" font-weight="700" letter-spacing="2">RELEASE VELOCITY</text>
+    <text x="848" y="130" fill="#F8FBFF" font-size="34" font-weight="700">2.8k+ / year</text>
+    <text x="848" y="148" fill="#7DD3FC" font-size="16" font-weight="700">active contributions</text>
+  </g>
+
+  <g class="float" style="animation-delay: -1.2s;">
+    <rect x="820" y="168" width="324" height="92" rx="22" fill="url(#soft)" stroke="#1B3048"/>
+    <text x="848" y="200" fill="#8CB7D8" font-size="14" font-weight="700" letter-spacing="2">CURRENT SIGNAL</text>
+    <text x="848" y="232" fill="#F8FBFF" font-size="34" font-weight="700">37 day streak</text>
+    <text x="848" y="250" fill="#7DD3FC" font-size="16" font-weight="700">shipping daily</text>
+  </g>
+
+  <g class="float" style="animation-delay: -2.2s;">
+    <rect x="820" y="270" width="324" height="96" rx="22" fill="url(#soft)" stroke="#1B3048"/>
+    <text x="848" y="302" fill="#8CB7D8" font-size="14" font-weight="700" letter-spacing="2">OPERATOR RANGE</text>
+    <text x="848" y="336" fill="#F8FBFF" font-size="34" font-weight="700">90+ dev org</text>
+    <text x="848" y="362" fill="#F8FBFF" font-size="34" font-weight="700">200+ products</text>
+  </g>
+
+  <circle cx="928" cy="118" r="108" fill="#22D3EE" opacity="0.08" filter="url(#blur)"/>
+  <rect x="0.5" y="0.5" width="1199" height="419" rx="31.5" stroke="#1D3550"/>
+</svg>
