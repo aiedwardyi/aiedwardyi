@@ -3,11 +3,7 @@
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-streak-dark.png" />
-    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="./assets/profile-streak-light.png" />
-    <img src="./assets/profile-streak-light.png" height="188" alt="Edward Yi GitHub streak stats" />
-  </picture>
+  <img src="./assets/profile-streak-unified.png" height="188" alt="Edward Yi GitHub streak stats" />
 </p>
 
 <p align="center">
