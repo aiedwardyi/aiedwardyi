@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/profile-hero-alt-12-shipping-board.svg" width="92%" alt="Edward Yi shipping board profile hero" />
+  <img src="./assets/profile-hero-alt-12-shipping-board.svg" width="92%" alt="Edward Yi operator board profile hero" />
 </p>
 
 <p align="center">
