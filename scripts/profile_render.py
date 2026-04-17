@@ -1,0 +1,75 @@
+"""SVG templates for the editorial cream profile.
+
+Uses string.Template ($var substitution) because SVG/CSS are dense with braces
+and f-string escaping gets ugly fast.
+"""
+from __future__ import annotations
+
+from datetime import datetime
+from string import Template
+
+HERO_TEMPLATE = Template("""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="hero-title">
+  <title id="hero-title">Edward Yi profile hero</title>
+  <style>
+    .bg { fill: #f4efe6; stroke: #d8d1c2; stroke-width: 1; }
+    .ink { fill: #141414; }
+    .muted { fill: #555555; }
+    .tan { fill: #8a7a5a; }
+    .sub-tan { fill: #7a6a4a; }
+    .dot { fill: #c94a2a; }
+    .serif { font-family: "Charter", "Iowan Old Style", "Times New Roman", Georgia, serif; }
+    .mono { font-family: ui-monospace, "SF Mono", Consolas, "Liberation Mono", monospace; }
+    .rule { stroke: #141414; stroke-width: 1; }
+  </style>
+
+  <rect class="bg" x="0.5" y="0.5" width="1199" height="359" rx="6"/>
+
+  <!-- Top rule -->
+  <text class="mono ink" x="48" y="56" font-size="11" letter-spacing="3" text-transform="uppercase">$dateline</text>
+  <circle class="dot" cx="968" cy="51.5" r="3.5"/>
+  <text class="mono ink" x="980" y="56" font-size="11" letter-spacing="3">SHIPPING DAILY</text>
+  <text class="mono ink" x="1140" y="56" font-size="11" letter-spacing="3" text-anchor="end">SEOUL</text>
+  <line class="rule" x1="48" y1="70" x2="1152" y2="70"/>
+
+  <!-- Left column: byline, name, abstract -->
+  <text class="mono muted" x="48" y="112" font-size="11" letter-spacing="2.5">AI ENGINEER  ·  FOUNDER</text>
+  <text class="serif ink" x="48" y="184" font-size="64" font-weight="500" letter-spacing="-0.8">Edward Yi</text>
+  <text class="mono tan" x="48" y="224" font-size="11" letter-spacing="2.5">ABSTRACT</text>
+
+  <!-- Abstract body, two lines -->
+  <text class="serif ink" x="48" y="254" font-size="16" font-style="italic">
+    <tspan x="48" dy="0">Building systems where agents ship real work into production.</tspan>
+    <tspan x="48" dy="22">Previously led a 90-dev org shipping 200+ products.</tspan>
+  </text>
+
+  <!-- Right column: stats -->
+  <line class="rule" x1="780" y1="100" x2="780" y2="300"/>
+
+  <text class="mono ink" x="812" y="128" font-size="11" letter-spacing="2.5" opacity="0.7">CONTRIBUTIONS</text>
+  <text class="serif ink" x="812" y="192" font-size="54" font-weight="500" letter-spacing="-1.2">$contributions_total</text>
+  <text class="mono sub-tan" x="812" y="214" font-size="11">since $created_year</text>
+
+  <text class="mono ink" x="984" y="128" font-size="11" letter-spacing="2.5" opacity="0.7">DAY STREAK</text>
+  <text x="984" y="192">
+    <tspan class="serif ink" font-size="54" font-weight="500" letter-spacing="-1.2">$streak</tspan><tspan class="mono muted" font-size="14" dy="-20" dx="4">d</tspan>
+  </text>
+  <text class="mono sub-tan" x="984" y="214" font-size="11">current</text>
+</svg>
+""")
+
+
+def render_hero(
+    *,
+    contributions_total: int,
+    streak: int,
+    created_year: int,
+    now: datetime | None = None,
+) -> str:
+    now = now or datetime.utcnow()
+    dateline = f"No. {now.month:02d}·{now.day:02d}·{now.year}"
+    return HERO_TEMPLATE.substitute(
+        dateline=dateline,
+        contributions_total=f"{contributions_total:,}",
+        streak=str(streak),
+        created_year=str(created_year),
+    )
