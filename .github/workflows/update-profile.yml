@@ -1,0 +1,45 @@
+name: Update profile
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+    branches: [main]
+    paths:
+      - scripts/generate_profile.py
+      - scripts/profile_data.py
+      - scripts/profile_render.py
+      - .github/workflows/update-profile.yml
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Generate SVGs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m scripts.generate_profile --login aiedwardyi
+
+      - name: Commit if changed
+        run: |
+          git config user.name "profile-bot"
+          git config user.email "profile-bot@users.noreply.github.com"
+          git add assets/hero.svg assets/activity.svg
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update profile SVGs"
+            git push
+          fi
