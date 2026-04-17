@@ -5,7 +5,7 @@ and f-string escaping gets ugly fast.
 """
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import datetime, timezone
 from string import Template
 
 HERO_TEMPLATE = Template("""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="hero-title">
@@ -65,7 +65,7 @@ def render_hero(
     created_year: int,
     now: datetime | None = None,
 ) -> str:
-    now = now or datetime.utcnow()
+    now = now or datetime.now(timezone.utc)
     dateline = f"No. {now.month:02d}·{now.day:02d}·{now.year}"
     return HERO_TEMPLATE.substitute(
         dateline=dateline,
@@ -180,10 +180,8 @@ _MONTH_ABBREV = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", 
 
 
 def _axis_months(now: datetime) -> list[str]:
-    """Return 6 month labels spaced ~2 months apart ending 2 months before today."""
-    # Starting 12 months ago, pick months at offsets [0, 2, 4, 6, 8, 10] from start
+    """Return 6 month labels spaced 2 months apart, trailing into today."""
     start_month = (now.month - 11) % 12 or 12
-    start_year = now.year if now.month - 11 > 0 else now.year - 1
     months: list[str] = []
     for offset in (0, 2, 4, 6, 8, 10):
         m = (start_month - 1 + offset) % 12
@@ -192,7 +190,7 @@ def _axis_months(now: datetime) -> list[str]:
 
 
 def render_activity(weekly: list[int], now: datetime | None = None) -> str:
-    now = now or datetime.utcnow()
+    now = now or datetime.now(timezone.utc)
     line_path, area_path, points = _build_chart_paths(weekly)
     markers = _build_markers(points, weekly)
     months = _axis_months(now)

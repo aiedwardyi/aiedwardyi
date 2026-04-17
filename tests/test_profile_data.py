@@ -1,4 +1,4 @@
-from scripts.profile_data import compute_current_streak
+from scripts.profile_data import aggregate_weekly, compute_current_streak
 
 
 def _days(*counts):
@@ -36,9 +36,6 @@ def test_streak_with_empty_list():
     assert compute_current_streak([]) == 0
 
 
-from scripts.profile_data import aggregate_weekly
-
-
 def test_aggregate_weekly_sums_each_week_of_seven():
     # 14 days, 1 contribution each = two weeks of 7
     days = _days(*([1] * 14))
@@ -60,3 +57,17 @@ def test_aggregate_weekly_empty():
 def test_aggregate_weekly_single_day():
     days = _days(5)
     assert aggregate_weekly(days) == [5]
+
+
+def test_streak_ignores_future_dated_days_after_caller_filters():
+    # Callers must strip future-dated days before passing in. Regression
+    # for the bug where GitHub pads the final Sun-Sat week with zero-count
+    # future days, which would otherwise kill the streak on any non-Saturday.
+    # Simulated state: today is Wed with 4 contributions, then Thu/Fri/Sat
+    # are future-dated zeros that the caller is expected to drop.
+    full_week = _days(1, 1, 2, 4, 0, 0, 0)
+    # Incorrect behavior (unfiltered): streak breaks at first trailing 0
+    assert compute_current_streak(full_week) == 0
+    # Correct behavior (caller filters to <= today): streak is 4
+    through_today = full_week[:4]
+    assert compute_current_streak(through_today) == 4

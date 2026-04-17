@@ -5,7 +5,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from scripts.profile_data import fetch_full_profile, get_token_from_env, fetch_account_created_at
+from scripts.profile_data import fetch_full_profile, get_token_from_env
 from scripts.profile_render import render_hero, render_activity
 
 
@@ -24,12 +24,11 @@ def main() -> int:
 
     token = get_token_from_env()
     profile = fetch_full_profile(args.login, token)
-    created_at = fetch_account_created_at(args.login, token)
 
     hero_svg = render_hero(
         contributions_total=profile["total_contributions"],
         streak=profile["current_streak"],
-        created_year=created_at.year,
+        created_year=profile["created_at"].year,
     )
     activity_svg = render_activity(profile["weekly_last_year"])
 

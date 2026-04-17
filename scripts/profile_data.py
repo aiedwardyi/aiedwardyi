@@ -5,47 +5,12 @@ summary metrics. Pure functions where possible - only the fetch layer does I/O.
 """
 from __future__ import annotations
 
+import os
+from datetime import datetime, timedelta, timezone
 from typing import Iterable
 
-
-def compute_current_streak(days: Iterable[dict]) -> int:
-    """Count consecutive days with count >= 1, walking backward from the last day.
-
-    Args:
-        days: Sequence of {'date': str, 'count': int} dicts, oldest first.
-
-    Returns:
-        Integer streak length. Zero if today (the last day) has no contributions.
-    """
-    streak = 0
-    for day in reversed(list(days)):
-        if day["count"] >= 1:
-            streak += 1
-        else:
-            break
-    return streak
-
-
-def aggregate_weekly(days: Iterable[dict]) -> list[int]:
-    """Sum contributions into weekly buckets of 7, oldest week first.
-
-    Args:
-        days: Sequence of {'date': str, 'count': int} dicts, oldest first.
-
-    Returns:
-        List of weekly sums. Final bucket may contain fewer than 7 days.
-    """
-    days = list(days)
-    weeks: list[int] = []
-    for start in range(0, len(days), 7):
-        weeks.append(sum(d["count"] for d in days[start : start + 7]))
-    return weeks
-
-
-import os
-from datetime import datetime, timezone
-
 import requests
+
 
 GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
 
@@ -74,6 +39,45 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
   }
 }
 """
+
+
+def compute_current_streak(days: Iterable[dict]) -> int:
+    """Count consecutive days with count >= 1, walking backward from the last day.
+
+    Caller must pre-filter out future-dated days. GitHub's contribution calendar
+    returns whole Sun-Sat weeks, padding future days with count=0 - those would
+    otherwise break the streak immediately on any non-Saturday.
+
+    Args:
+        days: Sequence of {'date': str, 'count': int} dicts, oldest first,
+            containing only dates up to and including today.
+
+    Returns:
+        Integer streak length. Zero if today (the last day) has no contributions.
+    """
+    streak = 0
+    for day in reversed(list(days)):
+        if day["count"] >= 1:
+            streak += 1
+        else:
+            break
+    return streak
+
+
+def aggregate_weekly(days: Iterable[dict]) -> list[int]:
+    """Sum contributions into weekly buckets of 7, oldest week first.
+
+    Args:
+        days: Sequence of {'date': str, 'count': int} dicts, oldest first.
+
+    Returns:
+        List of weekly sums. Final bucket may contain fewer than 7 days.
+    """
+    days = list(days)
+    weeks: list[int] = []
+    for start in range(0, len(days), 7):
+        weeks.append(sum(d["count"] for d in days[start : start + 7]))
+    return weeks
 
 
 def _post(query: str, variables: dict, token: str) -> dict:
@@ -123,19 +127,19 @@ def fetch_full_profile(login: str, token: str) -> dict:
     Returns:
         {
           'total_contributions': int,       # full lifetime total
-          'days_last_year': list[{date,count}],  # ordered oldest->newest
+          'created_at': datetime,           # account creation (UTC)
+          'days_last_year': list[{date,count}],  # ordered oldest->newest, <= today
           'current_streak': int,
           'weekly_last_year': list[int],    # 52/53 weekly totals
         }
     """
     now = datetime.now(timezone.utc)
+    today_iso = now.date().isoformat()
     created_at = fetch_account_created_at(login, token)
 
     # Lifetime total: sum contributionCalendar.totalContributions across each year window
     lifetime_total = 0
-    start_year = created_at.year
-    end_year = now.year
-    for year in range(start_year, end_year + 1):
+    for year in range(created_at.year, now.year + 1):
         window_from = datetime(year, 1, 1, tzinfo=timezone.utc)
         window_to = datetime(year, 12, 31, 23, 59, 59, tzinfo=timezone.utc)
         if window_from < created_at:
@@ -145,13 +149,17 @@ def fetch_full_profile(login: str, token: str) -> dict:
         cal = fetch_year_window(login, token, window_from, window_to)
         lifetime_total += cal["totalContributions"]
 
-    # Last-year window for streak + weekly graph
-    last_year_from = now.replace(year=now.year - 1)
+    # Trailing 12 months for streak + weekly graph. timedelta (not replace(year=...))
+    # so Feb 29 doesn't crash.
+    last_year_from = now - timedelta(days=365)
     cal = fetch_year_window(login, token, last_year_from, now)
     days = _flatten_days(cal)
+    # Drop future-dated days that GitHub pads into the final Sun-Sat week.
+    days = [d for d in days if d["date"] <= today_iso]
 
     return {
         "total_contributions": lifetime_total,
+        "created_at": created_at,
         "days_last_year": days,
         "current_streak": compute_current_streak(days),
         "weekly_last_year": aggregate_weekly(days),
