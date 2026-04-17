@@ -24,3 +24,19 @@ def compute_current_streak(days: Iterable[dict]) -> int:
         else:
             break
     return streak
+
+
+def aggregate_weekly(days: Iterable[dict]) -> list[int]:
+    """Sum contributions into weekly buckets of 7, oldest week first.
+
+    Args:
+        days: Sequence of {'date': str, 'count': int} dicts, oldest first.
+
+    Returns:
+        List of weekly sums. Final bucket may contain fewer than 7 days.
+    """
+    days = list(days)
+    weeks: list[int] = []
+    for start in range(0, len(days), 7):
+        weeks.append(sum(d["count"] for d in days[start : start + 7]))
+    return weeks

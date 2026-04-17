@@ -34,3 +34,29 @@ def test_streak_with_single_day_of_contributions():
 
 def test_streak_with_empty_list():
     assert compute_current_streak([]) == 0
+
+
+from scripts.profile_data import aggregate_weekly
+
+
+def test_aggregate_weekly_sums_each_week_of_seven():
+    # 14 days, 1 contribution each = two weeks of 7
+    days = _days(*([1] * 14))
+    weeks = aggregate_weekly(days)
+    assert weeks == [7, 7]
+
+
+def test_aggregate_weekly_handles_partial_trailing_week():
+    # 10 days: week of 7 + partial week of 3
+    days = _days(*([2] * 10))
+    weeks = aggregate_weekly(days)
+    assert weeks == [14, 6]
+
+
+def test_aggregate_weekly_empty():
+    assert aggregate_weekly([]) == []
+
+
+def test_aggregate_weekly_single_day():
+    days = _days(5)
+    assert aggregate_weekly(days) == [5]
