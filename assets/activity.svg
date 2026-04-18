@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" viewBox="0 0 1200 220" role="img" aria-labelledby="activity-title">
-  <title id="activity-title">Contribution activity since Jan 2026</title>
+  <title id="activity-title">Contribution activity since Dec 2025</title>
   <style>
     .bg { fill: #f4efe6; stroke: #d8d1c2; stroke-width: 1; }
     .ink { fill: #141414; }
@@ -16,8 +16,8 @@
   <rect class="bg" x="0.5" y="0.5" width="1199" height="219" rx="6"/>
 
   <!-- Header -->
-  <text x="48" y="44" class="serif ink" font-size="18" font-weight="500">Figure I. <tspan font-style="italic">Contribution activity, since Jan 2026.</tspan></text>
-  <text x="1152" y="44" class="mono muted" font-size="11" letter-spacing="2" text-anchor="end">WEEKLY TOTALS  ·  N = 14</text>
+  <text x="48" y="44" class="serif ink" font-size="18" font-weight="500">Figure I. <tspan font-style="italic">Contribution activity, since Dec 2025.</tspan></text>
+  <text x="1152" y="44" class="mono muted" font-size="11" letter-spacing="2" text-anchor="end">WEEKLY TOTALS  ·  N = 17</text>
   <line class="rule" x1="48" y1="58" x2="1152" y2="58"/>
 
   <!-- Grid -->
@@ -32,19 +32,19 @@
       <stop offset="100%" stop-color="#141414" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <path d="M48.0,174.7 L132.9,165.8 L217.8,153.4 L302.8,141.0 L387.7,148.1 L472.6,135.6 L557.5,126.8 L642.5,130.3 L727.4,109.0 L812.3,82.4 L897.2,70.0 L982.2,91.3 L1067.1,77.1 L1152.0,100.2 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
-  <path class="line" d="M48.0,174.7 L132.9,165.8 L217.8,153.4 L302.8,141.0 L387.7,148.1 L472.6,135.6 L557.5,126.8 L642.5,130.3 L727.4,109.0 L812.3,82.4 L897.2,70.0 L982.2,91.3 L1067.1,77.1 L1152.0,100.2"/>
+  <path d="M48.0,141.8 L117.0,162.4 L186.0,93.9 L255.0,135.8 L324.0,167.3 L393.0,172.1 L462.0,173.3 L531.0,170.9 L600.0,146.4 L669.0,103.0 L738.0,121.5 L807.0,133.3 L876.0,70.0 L945.0,87.0 L1014.0,111.2 L1083.0,102.4 L1152.0,165.5 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
+  <path class="line" d="M48.0,141.8 L117.0,162.4 L186.0,93.9 L255.0,135.8 L324.0,167.3 L393.0,172.1 L462.0,173.3 L531.0,170.9 L600.0,146.4 L669.0,103.0 L738.0,121.5 L807.0,133.3 L876.0,70.0 L945.0,87.0 L1014.0,111.2 L1083.0,102.4 L1152.0,165.5"/>
 
-  <circle class="dot" cx="897.2" cy="70.0" r="2.5"/>
-  <circle class="dot" cx="1067.1" cy="77.1" r="2.5"/>
-  <circle class="dot" cx="1152.0" cy="100.2" r="3.5" stroke="#f4efe6" stroke-width="2"/>
+  <circle class="dot" cx="876.0" cy="70.0" r="2.5"/>
+  <circle class="dot" cx="945.0" cy="87.0" r="2.5"/>
+  <circle class="dot" cx="1152.0" cy="165.5" r="3.5" stroke="#f4efe6" stroke-width="2"/>
 
   <!-- X axis -->
-  <text x="48" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">JAN</text>
-  <text x="232" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">FEB</text>
+  <text x="48" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">DEC</text>
+  <text x="232" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">JAN</text>
   <text x="416" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">FEB</text>
-  <text x="600" y="200" class="mono sub-tan" font-size="10" letter-spacing="1" text-anchor="middle">MAR</text>
+  <text x="600" y="200" class="mono sub-tan" font-size="10" letter-spacing="1" text-anchor="middle">FEB</text>
   <text x="784" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">MAR</text>
-  <text x="968" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">APR</text>
+  <text x="968" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">MAR</text>
   <text x="1152" y="200" class="mono sub-tan" font-size="10" letter-spacing="1" text-anchor="end">TODAY</text>
 </svg>
