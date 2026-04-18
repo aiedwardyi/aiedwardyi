@@ -10,18 +10,19 @@ from datetime import date, datetime, timedelta, timezone
 from string import Template
 
 
-# Cream: warm paper on light mode.
+# Cream: soft off-white with a whisper of warmth. Tuned to sit naturally
+# against GitHub's near-white canvas without reading as yellowed paper.
 CREAM = {
-    "bg": "#f4efe6",
-    "border": "#d8d1c2",
+    "bg": "#faf7ef",
+    "border": "#e8e2d4",
     "ink": "#141414",
     "muted": "#555555",
-    "tan": "#8a7a5a",
-    "sub_tan": "#7a6a4a",
+    "tan": "#8f7f60",
+    "sub_tan": "#7e6e4e",
     "dot": "#c94a2a",
     "grid_opacity": "0.06",
     "area_top_opacity": "0.18",
-    "marker_ring": "#f4efe6",
+    "marker_ring": "#faf7ef",
 }
 
 # Charcoal: cool deep graphite for dark mode. Sits deeper than GitHub's
