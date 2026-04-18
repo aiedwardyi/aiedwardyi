@@ -32,17 +32,17 @@
       <stop offset="100%" stop-color="#dfe4eb" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <path d="M48.0,175.4 L117.0,167.8 L186.0,157.1 L255.0,146.4 L324.0,152.5 L393.0,141.8 L462.0,134.2 L531.0,137.2 L600.0,118.9 L669.0,96.0 L738.0,85.3 L807.0,103.6 L876.0,91.4 L945.0,111.2 L1014.0,77.6 L1083.0,70.0 L1152.0,96.0 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
-  <path class="line" d="M48.0,175.4 L117.0,167.8 L186.0,157.1 L255.0,146.4 L324.0,152.5 L393.0,141.8 L462.0,134.2 L531.0,137.2 L600.0,118.9 L669.0,96.0 L738.0,85.3 L807.0,103.6 L876.0,91.4 L945.0,111.2 L1014.0,77.6 L1083.0,70.0 L1152.0,96.0"/>
+  <path d="M48.0,141.8 L117.0,162.4 L186.0,93.9 L255.0,135.8 L324.0,167.3 L393.0,172.1 L462.0,173.3 L531.0,170.9 L600.0,146.4 L669.0,103.0 L738.0,121.5 L807.0,133.3 L876.0,70.0 L945.0,87.0 L1014.0,111.2 L1083.0,102.4 L1152.0,164.8 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
+  <path class="line" d="M48.0,141.8 L117.0,162.4 L186.0,93.9 L255.0,135.8 L324.0,167.3 L393.0,172.1 L462.0,173.3 L531.0,170.9 L600.0,146.4 L669.0,103.0 L738.0,121.5 L807.0,133.3 L876.0,70.0 L945.0,87.0 L1014.0,111.2 L1083.0,102.4 L1152.0,164.8"/>
 
-  <circle class="dot" cx="1083.0" cy="70.0" r="2.5"/>
-  <circle class="dot" cx="1014.0" cy="77.6" r="2.5"/>
-  <circle class="dot" cx="1152.0" cy="96.0" r="3.5" stroke="#0a0d13" stroke-width="2"/>
+  <circle class="dot" cx="876.0" cy="70.0" r="2.5"/>
+  <circle class="dot" cx="945.0" cy="87.0" r="2.5"/>
+  <circle class="dot" cx="1152.0" cy="164.8" r="3.5" stroke="#0a0d13" stroke-width="2"/>
 
   <!-- X axis -->
   <text x="48" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">DEC</text>
   <text x="232" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">JAN</text>
-  <text x="416" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">JAN</text>
+  <text x="416" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">FEB</text>
   <text x="600" y="200" class="mono sub-tan" font-size="10" letter-spacing="1" text-anchor="middle">FEB</text>
   <text x="784" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">MAR</text>
   <text x="968" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">MAR</text>
