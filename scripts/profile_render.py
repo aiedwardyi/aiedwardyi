@@ -13,16 +13,16 @@ from string import Template
 # Cream: soft off-white with a whisper of warmth. Tuned to sit naturally
 # against GitHub's near-white canvas without reading as yellowed paper.
 CREAM = {
-    "bg": "#faf7ef",
-    "border": "#e8e2d4",
+    "bg": "#fcfaf5",
+    "border": "#eae6da",
     "ink": "#141414",
     "muted": "#555555",
-    "tan": "#8f7f60",
-    "sub_tan": "#7e6e4e",
+    "tan": "#94876a",
+    "sub_tan": "#80735a",
     "dot": "#c94a2a",
     "grid_opacity": "0.06",
     "area_top_opacity": "0.18",
-    "marker_ring": "#faf7ef",
+    "marker_ring": "#fcfaf5",
 }
 
 # Charcoal: cool deep graphite for dark mode. Sits deeper than GitHub's
