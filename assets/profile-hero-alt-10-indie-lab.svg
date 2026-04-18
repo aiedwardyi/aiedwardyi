@@ -1,0 +1,96 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Edward Yi indie lab profile hero</title>
+  <desc id="desc">A maximal indie-dev style hero with terminal panels, neon accents, and system graphics.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#04070D"/>
+      <stop offset="0.55" stop-color="#07111C"/>
+      <stop offset="1" stop-color="#0A0D14"/>
+    </linearGradient>
+    <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(876 146) scale(320 210)">
+      <stop stop-color="#67E8F9" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#67E8F9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="limeGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1060 282) scale(220 150)">
+      <stop stop-color="#BEF264" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#BEF264" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="0.5" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#BEF264"/>
+    </linearGradient>
+    <linearGradient id="border" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9" stop-opacity="0.28"/>
+      <stop offset="0.5" stop-color="#67E8F9" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#BEF264" stop-opacity="0.20"/>
+    </linearGradient>
+    <pattern id="scan" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 0H8" stroke="#94A3B8" stroke-opacity="0.06"/>
+      <path d="M0 4H8" stroke="#94A3B8" stroke-opacity="0.03"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="360" rx="28" fill="url(#cyanGlow)"/>
+  <rect width="1200" height="360" rx="28" fill="url(#limeGlow)"/>
+  <rect width="1200" height="360" rx="28" fill="url(#scan)"/>
+
+  <g opacity="0.12">
+    <path d="M0 72H1200" stroke="#334155"/>
+    <path d="M0 144H1200" stroke="#334155"/>
+    <path d="M0 216H1200" stroke="#334155"/>
+    <path d="M0 288H1200" stroke="#334155"/>
+    <path d="M150 0V360" stroke="#334155"/>
+    <path d="M300 0V360" stroke="#334155"/>
+    <path d="M450 0V360" stroke="#334155"/>
+    <path d="M600 0V360" stroke="#334155"/>
+    <path d="M750 0V360" stroke="#334155"/>
+    <path d="M900 0V360" stroke="#334155"/>
+    <path d="M1050 0V360" stroke="#334155"/>
+  </g>
+
+  <text x="58" y="54" fill="#67E8F9" font-size="14" font-weight="700" letter-spacing="2.4" font-family="Consolas, 'JetBrains Mono', monospace">INDIE LAB / SEOUL / ALWAYS SHIPPING</text>
+  <rect x="58" y="70" width="160" height="4" rx="2" fill="url(#accent)"/>
+
+  <text x="58" y="146" fill="#F8FAFC" font-size="76" font-weight="700" font-family="Segoe UI, Arial, sans-serif">Edward</text>
+  <text x="58" y="214" fill="#F8FAFC" font-size="76" font-weight="700" font-family="Segoe UI, Arial, sans-serif">Yi</text>
+
+  <rect x="60" y="238" width="198" height="32" rx="16" fill="#071827" stroke="#1E293B"/>
+  <rect x="270" y="238" width="214" height="32" rx="16" fill="#071827" stroke="#1E293B"/>
+  <text x="84" y="259" fill="#BEF264" font-size="15" font-weight="700" font-family="Consolas, 'JetBrains Mono', monospace">builder-operator</text>
+  <text x="296" y="259" fill="#67E8F9" font-size="15" font-weight="700" font-family="Consolas, 'JetBrains Mono', monospace">python / ts / react</text>
+
+  <text x="58" y="306" fill="#E2E8F0" font-size="30" font-weight="650" font-family="Segoe UI, Arial, sans-serif">building weird systems that ship</text>
+  <text x="58" y="334" fill="#94A3B8" font-size="18" font-weight="600" font-family="Segoe UI, Arial, sans-serif">AI systems / developer tools / medtech AI</text>
+
+  <rect x="640" y="40" width="500" height="280" rx="24" fill="#06111B" fill-opacity="0.82" stroke="#1E293B"/>
+  <rect x="640" y="40" width="500" height="32" rx="24" fill="#0B1725"/>
+  <circle cx="664" cy="56" r="5" fill="#FB923C"/>
+  <circle cx="682" cy="56" r="5" fill="#67E8F9"/>
+  <circle cx="700" cy="56" r="5" fill="#BEF264"/>
+  <text x="724" y="61" fill="#94A3B8" font-size="13" font-weight="700" letter-spacing="1.4" font-family="Consolas, 'JetBrains Mono', monospace">agent_lab.session</text>
+
+  <text x="666" y="104" fill="#67E8F9" font-size="15" font-weight="700" font-family="Consolas, 'JetBrains Mono', monospace">&gt; booting autonomous stack...</text>
+  <text x="666" y="132" fill="#BEF264" font-size="15" font-weight="700" font-family="Consolas, 'JetBrains Mono', monospace">&gt; routing devtool workflows...</text>
+  <text x="666" y="160" fill="#F8FAFC" font-size="15" font-weight="700" font-family="Consolas, 'JetBrains Mono', monospace">&gt; medtech signal locked</text>
+
+  <rect x="666" y="188" width="164" height="34" rx="17" fill="#08131F" stroke="#1E293B"/>
+  <rect x="846" y="188" width="118" height="34" rx="17" fill="#08131F" stroke="#1E293B"/>
+  <rect x="980" y="188" width="132" height="34" rx="17" fill="#08131F" stroke="#1E293B"/>
+  <text x="694" y="210" fill="#67E8F9" font-size="15" font-weight="700" font-family="Consolas, 'JetBrains Mono', monospace">agents_online: 07</text>
+  <text x="878" y="210" fill="#BEF264" font-size="15" font-weight="700" font-family="Consolas, 'JetBrains Mono', monospace">deploys: 200+</text>
+  <text x="1010" y="210" fill="#F8FAFC" font-size="15" font-weight="700" font-family="Consolas, 'JetBrains Mono', monospace">status: shipping</text>
+
+  <rect x="666" y="238" width="446" height="58" rx="18" fill="#07111B" stroke="#1E293B"/>
+  <path d="M690 275C726 262 742 250 770 252C800 254 816 278 844 278C872 278 884 244 914 244C946 244 958 272 988 272C1018 272 1036 252 1076 252" stroke="#67E8F9" stroke-width="3" stroke-linecap="round"/>
+  <path d="M690 286C718 286 734 266 758 266C786 266 798 286 824 286C850 286 864 260 892 260C918 260 932 286 958 286C982 286 998 268 1024 268C1050 268 1064 286 1086 286" stroke="#BEF264" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="770" cy="252" r="4.5" fill="#67E8F9"/>
+  <circle cx="914" cy="244" r="4.5" fill="#67E8F9"/>
+  <circle cx="1024" cy="268" r="4" fill="#BEF264"/>
+
+  <text x="1046" y="104" fill="#0F172A" font-size="118" font-weight="700" font-family="Segoe UI, Arial, sans-serif">00</text>
+  <text x="1016" y="136" fill="#94A3B8" font-size="13" font-weight="700" letter-spacing="1.6" font-family="Consolas, 'JetBrains Mono', monospace">boot_mode=indie</text>
+
+  <rect x="0.5" y="0.5" width="1199" height="359" rx="27.5" stroke="url(#border)"/>
+</svg>

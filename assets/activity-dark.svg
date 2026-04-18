@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" viewBox="0 0 1200 220" role="img" aria-labelledby="activity-title">
   <title id="activity-title">Contribution activity since Jan 2026</title>
   <style>
-    .bg { fill: #f4efe6; stroke: #d8d1c2; stroke-width: 1; }
-    .ink { fill: #141414; }
-    .muted { fill: #555555; }
-    .sub-tan { fill: #7a6a4a; }
-    .dot { fill: #c94a2a; }
+    .bg { fill: #1a1612; stroke: #2c2720; stroke-width: 1; }
+    .ink { fill: #ebdfc5; }
+    .muted { fill: #a89b81; }
+    .sub-tan { fill: #9c8456; }
+    .dot { fill: #e87252; }
     .serif { font-family: "Charter", "Iowan Old Style", "Times New Roman", Georgia, serif; }
     .mono { font-family: ui-monospace, "SF Mono", Consolas, "Liberation Mono", monospace; }
-    .rule { stroke: #141414; stroke-width: 1; }
-    .grid { stroke: #141414; stroke-opacity: 0.06; stroke-dasharray: 2 4; }
-    .line { fill: none; stroke: #141414; stroke-width: 1.4; }
+    .rule { stroke: #ebdfc5; stroke-width: 1; }
+    .grid { stroke: #ebdfc5; stroke-opacity: 0.12; stroke-dasharray: 2 4; }
+    .line { fill: none; stroke: #ebdfc5; stroke-width: 1.4; }
   </style>
 
   <rect class="bg" x="0.5" y="0.5" width="1199" height="219" rx="6"/>
@@ -28,8 +28,8 @@
   <!-- Area fill -->
   <defs>
     <linearGradient id="inkFill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#141414" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#141414" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ebdfc5" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ebdfc5" stop-opacity="0"/>
     </linearGradient>
   </defs>
   <path d="M48.0,174.7 L132.9,165.8 L217.8,153.4 L302.8,141.0 L387.7,148.1 L472.6,135.6 L557.5,126.8 L642.5,130.3 L727.4,109.0 L812.3,82.4 L897.2,70.0 L982.2,91.3 L1067.1,77.1 L1152.0,100.2 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
@@ -37,7 +37,7 @@
 
   <circle class="dot" cx="897.2" cy="70.0" r="2.5"/>
   <circle class="dot" cx="1067.1" cy="77.1" r="2.5"/>
-  <circle class="dot" cx="1152.0" cy="100.2" r="3.5" stroke="#f4efe6" stroke-width="2"/>
+  <circle class="dot" cx="1152.0" cy="100.2" r="3.5" stroke="#1a1612" stroke-width="2"/>
 
   <!-- X axis -->
   <text x="48" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">JAN</text>

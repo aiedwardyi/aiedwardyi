@@ -1,25 +1,57 @@
-"""SVG templates for the editorial cream profile.
+"""SVG templates for the editorial profile.
 
-Uses string.Template ($var substitution) because SVG/CSS are dense with braces
-and f-string escaping gets ugly fast.
+Two themes: cream (light mode) and charcoal (dark mode). Same editorial
+skeleton, inverted palette. Uses string.Template ($var substitution)
+because SVG/CSS are dense with braces and f-string escaping gets ugly fast.
 """
 from __future__ import annotations
 
 from datetime import date, datetime, timedelta, timezone
 from string import Template
 
+
+# Cream: warm paper on light mode.
+CREAM = {
+    "bg": "#f4efe6",
+    "border": "#d8d1c2",
+    "ink": "#141414",
+    "muted": "#555555",
+    "tan": "#8a7a5a",
+    "sub_tan": "#7a6a4a",
+    "dot": "#c94a2a",
+    "grid_opacity": "0.06",
+    "area_top_opacity": "0.18",
+    "marker_ring": "#f4efe6",
+}
+
+# Charcoal: warm deep paper on dark mode. Sits intentionally above
+# GitHub dark canvas (#0d1117) as a distinct piece.
+CHARCOAL = {
+    "bg": "#1a1612",
+    "border": "#2c2720",
+    "ink": "#ebdfc5",
+    "muted": "#a89b81",
+    "tan": "#c19a5d",
+    "sub_tan": "#9c8456",
+    "dot": "#e87252",
+    "grid_opacity": "0.12",
+    "area_top_opacity": "0.22",
+    "marker_ring": "#1a1612",
+}
+
+
 HERO_TEMPLATE = Template("""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="hero-title">
   <title id="hero-title">Edward Yi profile hero</title>
   <style>
-    .bg { fill: #f4efe6; stroke: #d8d1c2; stroke-width: 1; }
-    .ink { fill: #141414; }
-    .muted { fill: #555555; }
-    .tan { fill: #8a7a5a; }
-    .sub-tan { fill: #7a6a4a; }
-    .dot { fill: #c94a2a; }
+    .bg { fill: $bg; stroke: $border; stroke-width: 1; }
+    .ink { fill: $ink; }
+    .muted { fill: $muted; }
+    .tan { fill: $tan; }
+    .sub-tan { fill: $sub_tan; }
+    .dot { fill: $dot; }
     .serif { font-family: "Charter", "Iowan Old Style", "Times New Roman", Georgia, serif; }
     .mono { font-family: ui-monospace, "SF Mono", Consolas, "Liberation Mono", monospace; }
-    .rule { stroke: #141414; stroke-width: 1; }
+    .rule { stroke: $ink; stroke-width: 1; }
   </style>
 
   <rect class="bg" x="0.5" y="0.5" width="1199" height="359" rx="6"/>
@@ -58,36 +90,19 @@ HERO_TEMPLATE = Template("""<svg xmlns="http://www.w3.org/2000/svg" width="1200"
 """)
 
 
-def render_hero(
-    *,
-    contributions_total: int,
-    streak: int,
-    created_year: int,
-    now: datetime | None = None,
-) -> str:
-    now = now or datetime.now(timezone.utc)
-    dateline = f"No. {now.month:02d}·{now.day:02d}·{now.year}"
-    return HERO_TEMPLATE.substitute(
-        dateline=dateline,
-        contributions_total=f"{contributions_total:,}",
-        streak=str(streak),
-        created_year=str(created_year),
-    )
-
-
 ACTIVITY_TEMPLATE = Template("""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" viewBox="0 0 1200 220" role="img" aria-labelledby="activity-title">
   <title id="activity-title">Contribution activity since $since_label</title>
   <style>
-    .bg { fill: #f4efe6; stroke: #d8d1c2; stroke-width: 1; }
-    .ink { fill: #141414; }
-    .muted { fill: #555555; }
-    .sub-tan { fill: #7a6a4a; }
-    .dot { fill: #c94a2a; }
+    .bg { fill: $bg; stroke: $border; stroke-width: 1; }
+    .ink { fill: $ink; }
+    .muted { fill: $muted; }
+    .sub-tan { fill: $sub_tan; }
+    .dot { fill: $dot; }
     .serif { font-family: "Charter", "Iowan Old Style", "Times New Roman", Georgia, serif; }
     .mono { font-family: ui-monospace, "SF Mono", Consolas, "Liberation Mono", monospace; }
-    .rule { stroke: #141414; stroke-width: 1; }
-    .grid { stroke: #141414; stroke-opacity: 0.06; stroke-dasharray: 2 4; }
-    .line { fill: none; stroke: #141414; stroke-width: 1.4; }
+    .rule { stroke: $ink; stroke-width: 1; }
+    .grid { stroke: $ink; stroke-opacity: $grid_opacity; stroke-dasharray: 2 4; }
+    .line { fill: none; stroke: $ink; stroke-width: 1.4; }
   </style>
 
   <rect class="bg" x="0.5" y="0.5" width="1199" height="219" rx="6"/>
@@ -105,8 +120,8 @@ ACTIVITY_TEMPLATE = Template("""<svg xmlns="http://www.w3.org/2000/svg" width="1
   <!-- Area fill -->
   <defs>
     <linearGradient id="inkFill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#141414" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#141414" stop-opacity="0"/>
+      <stop offset="0%" stop-color="$ink" stop-opacity="$area_top_opacity"/>
+      <stop offset="100%" stop-color="$ink" stop-opacity="0"/>
     </linearGradient>
   </defs>
   <path d="$area_path" fill="url(#inkFill)"/>
@@ -156,7 +171,11 @@ def _build_chart_paths(weekly: list[int]) -> tuple[str, str, list[tuple[float, f
     return line_path, area_path, points
 
 
-def _build_markers(points: list[tuple[float, float]], weekly: list[int]) -> str:
+def _build_markers(
+    points: list[tuple[float, float]],
+    weekly: list[int],
+    marker_ring: str,
+) -> str:
     """Mark the two highest peaks + today's point."""
     if not points:
         return ""
@@ -171,7 +190,7 @@ def _build_markers(points: list[tuple[float, float]], weekly: list[int]) -> str:
     # Today (last point) - larger ringed marker
     x, y = points[-1]
     markers.append(
-        f'<circle class="dot" cx="{x:.1f}" cy="{y:.1f}" r="3.5" stroke="#f4efe6" stroke-width="2"/>'
+        f'<circle class="dot" cx="{x:.1f}" cy="{y:.1f}" r="3.5" stroke="{marker_ring}" stroke-width="2"/>'
     )
     return "\n  ".join(markers)
 
@@ -197,17 +216,38 @@ def _since_label(start: date) -> str:
     return f"{_MONTH_ABBREV[start.month - 1].capitalize()} {start.year}"
 
 
+def render_hero(
+    *,
+    contributions_total: int,
+    streak: int,
+    created_year: int,
+    theme: dict = CREAM,
+    now: datetime | None = None,
+) -> str:
+    now = now or datetime.now(timezone.utc)
+    dateline = f"No. {now.month:02d}·{now.day:02d}·{now.year}"
+    return HERO_TEMPLATE.substitute(
+        **theme,
+        dateline=dateline,
+        contributions_total=f"{contributions_total:,}",
+        streak=str(streak),
+        created_year=str(created_year),
+    )
+
+
 def render_activity(
     weekly: list[int],
     *,
     start_date: date,
+    theme: dict = CREAM,
     now: datetime | None = None,
 ) -> str:
     now = now or datetime.now(timezone.utc)
     line_path, area_path, points = _build_chart_paths(weekly)
-    markers = _build_markers(points, weekly)
+    markers = _build_markers(points, weekly, theme["marker_ring"])
     months = _axis_months_range(start_date, now.date())
     return ACTIVITY_TEMPLATE.substitute(
+        **theme,
         n_weeks=str(len(weekly)),
         since_label=_since_label(start_date),
         line_path=line_path or "M0,0",
