@@ -5,7 +5,7 @@ and f-string escaping gets ugly fast.
 """
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from string import Template
 
 HERO_TEMPLATE = Template("""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="hero-title">
@@ -26,9 +26,9 @@ HERO_TEMPLATE = Template("""<svg xmlns="http://www.w3.org/2000/svg" width="1200"
 
   <!-- Top rule -->
   <text class="mono ink" x="48" y="56" font-size="11" letter-spacing="3" text-transform="uppercase">$dateline</text>
-  <circle class="dot" cx="968" cy="51.5" r="3.5"/>
-  <text class="mono ink" x="980" y="56" font-size="11" letter-spacing="3">SHIPPING DAILY</text>
-  <text class="mono ink" x="1140" y="56" font-size="11" letter-spacing="3" text-anchor="end">SEOUL</text>
+  <circle class="dot" cx="840" cy="51.5" r="3.5"/>
+  <text class="mono ink" x="852" y="56" font-size="11" letter-spacing="3">SHIPPING DAILY</text>
+  <text class="mono ink" x="1152" y="56" font-size="11" letter-spacing="3" text-anchor="end">SEOUL</text>
   <line class="rule" x1="48" y1="70" x2="1152" y2="70"/>
 
   <!-- Left column: byline, name, abstract -->
@@ -76,7 +76,7 @@ def render_hero(
 
 
 ACTIVITY_TEMPLATE = Template("""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" viewBox="0 0 1200 220" role="img" aria-labelledby="activity-title">
-  <title id="activity-title">Contribution activity, trailing 12 months</title>
+  <title id="activity-title">Contribution activity since $since_label</title>
   <style>
     .bg { fill: #f4efe6; stroke: #d8d1c2; stroke-width: 1; }
     .ink { fill: #141414; }
@@ -93,7 +93,7 @@ ACTIVITY_TEMPLATE = Template("""<svg xmlns="http://www.w3.org/2000/svg" width="1
   <rect class="bg" x="0.5" y="0.5" width="1199" height="219" rx="6"/>
 
   <!-- Header -->
-  <text x="48" y="44" class="serif ink" font-size="18" font-weight="500">Figure I. <tspan font-style="italic">Contribution activity, trailing 12 months.</tspan></text>
+  <text x="48" y="44" class="serif ink" font-size="18" font-weight="500">Figure I. <tspan font-style="italic">Contribution activity, since $since_label.</tspan></text>
   <text x="1152" y="44" class="mono muted" font-size="11" letter-spacing="2" text-anchor="end">WEEKLY TOTALS  ·  N = $n_weeks</text>
   <line class="rule" x1="48" y1="58" x2="1152" y2="58"/>
 
@@ -179,23 +179,37 @@ def _build_markers(points: list[tuple[float, float]], weekly: list[int]) -> str:
 _MONTH_ABBREV = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
 
 
-def _axis_months(now: datetime) -> list[str]:
-    """Return 6 month labels spaced 2 months apart, trailing into today."""
-    start_month = (now.month - 11) % 12 or 12
+def _axis_months_range(start: date, end: date) -> list[str]:
+    """Return 6 month abbreviations evenly spaced across [start, end)."""
+    total_days = (end - start).days
+    if total_days <= 0:
+        return [_MONTH_ABBREV[end.month - 1]] * 6
     months: list[str] = []
-    for offset in (0, 2, 4, 6, 8, 10):
-        m = (start_month - 1 + offset) % 12
-        months.append(_MONTH_ABBREV[m])
+    for i in range(6):
+        offset_days = int(total_days * i / 6)
+        d = start + timedelta(days=offset_days)
+        months.append(_MONTH_ABBREV[d.month - 1])
     return months
 
 
-def render_activity(weekly: list[int], now: datetime | None = None) -> str:
+def _since_label(start: date) -> str:
+    """Format a human-readable 'since' label like 'Jan 2026'."""
+    return f"{_MONTH_ABBREV[start.month - 1].capitalize()} {start.year}"
+
+
+def render_activity(
+    weekly: list[int],
+    *,
+    start_date: date,
+    now: datetime | None = None,
+) -> str:
     now = now or datetime.now(timezone.utc)
     line_path, area_path, points = _build_chart_paths(weekly)
     markers = _build_markers(points, weekly)
-    months = _axis_months(now)
+    months = _axis_months_range(start_date, now.date())
     return ACTIVITY_TEMPLATE.substitute(
         n_weeks=str(len(weekly)),
+        since_label=_since_label(start_date),
         line_path=line_path or "M0,0",
         area_path=area_path or "M0,0",
         markers=markers,

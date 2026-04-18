@@ -6,7 +6,7 @@ summary metrics. Pure functions where possible - only the fetch layer does I/O.
 from __future__ import annotations
 
 import os
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from typing import Iterable
 
 import requests
@@ -124,13 +124,18 @@ def _flatten_days(calendar: dict) -> list[dict]:
 def fetch_full_profile(login: str, token: str) -> dict:
     """Fetch all data needed to render the profile.
 
+    The weekly series is trimmed to start at the first non-zero week so
+    long empty prefixes (e.g., account idle for months then ramped up)
+    don't dominate the graph.
+
     Returns:
         {
           'total_contributions': int,       # full lifetime total
           'created_at': datetime,           # account creation (UTC)
-          'days_last_year': list[{date,count}],  # ordered oldest->newest, <= today
+          'days_active': list[{date,count}], # trimmed, ordered oldest->newest, <= today
           'current_streak': int,
-          'weekly_last_year': list[int],    # 52/53 weekly totals
+          'weekly_active': list[int],       # weekly totals from first active week
+          'activity_start': date,           # first day of the first active week
         }
     """
     now = datetime.now(timezone.utc)
@@ -157,12 +162,24 @@ def fetch_full_profile(login: str, token: str) -> dict:
     # Drop future-dated days that GitHub pads into the final Sun-Sat week.
     days = [d for d in days if d["date"] <= today_iso]
 
+    # Trim to first non-zero week so the graph doesn't open on a flat run of zeros.
+    weekly_full = aggregate_weekly(days)
+    first_active_week = next((i for i, w in enumerate(weekly_full) if w > 0), 0)
+    first_day_idx = first_active_week * 7
+    days_active = days[first_day_idx:] if days else []
+    weekly_active = weekly_full[first_active_week:] if weekly_full else []
+    if days_active:
+        activity_start = date.fromisoformat(days_active[0]["date"])
+    else:
+        activity_start = now.date()
+
     return {
         "total_contributions": lifetime_total,
         "created_at": created_at,
-        "days_last_year": days,
-        "current_streak": compute_current_streak(days),
-        "weekly_last_year": aggregate_weekly(days),
+        "days_active": days_active,
+        "current_streak": compute_current_streak(days_active),
+        "weekly_active": weekly_active,
+        "activity_start": activity_start,
     }
 
 

@@ -30,7 +30,10 @@ def main() -> int:
         streak=profile["current_streak"],
         created_year=profile["created_at"].year,
     )
-    activity_svg = render_activity(profile["weekly_last_year"])
+    activity_svg = render_activity(
+        profile["weekly_active"],
+        start_date=profile["activity_start"],
+    )
 
     if args.dry_run:
         print("=== HERO ===")

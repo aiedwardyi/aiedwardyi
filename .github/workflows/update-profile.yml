@@ -34,8 +34,8 @@ jobs:
 
       - name: Commit if changed
         run: |
-          git config user.name "profile-bot"
-          git config user.email "profile-bot@users.noreply.github.com"
+          git config user.name "aiedwardyi"
+          git config user.email "41576951+aiedwardyi@users.noreply.github.com"
           git add assets/hero.svg assets/activity.svg
           if git diff --cached --quiet; then
             echo "No changes"
