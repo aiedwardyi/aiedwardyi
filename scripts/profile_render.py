@@ -24,19 +24,20 @@ CREAM = {
     "marker_ring": "#f4efe6",
 }
 
-# Charcoal: warm deep paper on dark mode. Sits intentionally above
-# GitHub dark canvas (#0d1117) as a distinct piece.
+# Charcoal: cool deep graphite for dark mode. Sits deeper than GitHub's
+# canvas (#0d1117) so the card reads as a distinct slab. Cool neutral
+# palette; the warm red dot is the only intentional pop of heat.
 CHARCOAL = {
-    "bg": "#1a1612",
-    "border": "#2c2720",
-    "ink": "#ebdfc5",
-    "muted": "#a89b81",
-    "tan": "#c19a5d",
-    "sub_tan": "#9c8456",
+    "bg": "#0a0d13",
+    "border": "#1d2129",
+    "ink": "#dfe4eb",
+    "muted": "#8b9099",
+    "tan": "#9aa1ac",
+    "sub_tan": "#6d7480",
     "dot": "#e87252",
     "grid_opacity": "0.12",
-    "area_top_opacity": "0.22",
-    "marker_ring": "#1a1612",
+    "area_top_opacity": "0.20",
+    "marker_ring": "#0a0d13",
 }
 
 

@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="hero-title">
   <title id="hero-title">Edward Yi profile hero</title>
   <style>
-    .bg { fill: #1a1612; stroke: #2c2720; stroke-width: 1; }
-    .ink { fill: #ebdfc5; }
-    .muted { fill: #a89b81; }
-    .tan { fill: #c19a5d; }
-    .sub-tan { fill: #9c8456; }
+    .bg { fill: #0a0d13; stroke: #1d2129; stroke-width: 1; }
+    .ink { fill: #dfe4eb; }
+    .muted { fill: #8b9099; }
+    .tan { fill: #9aa1ac; }
+    .sub-tan { fill: #6d7480; }
     .dot { fill: #e87252; }
     .serif { font-family: "Charter", "Iowan Old Style", "Times New Roman", Georgia, serif; }
     .mono { font-family: ui-monospace, "SF Mono", Consolas, "Liberation Mono", monospace; }
-    .rule { stroke: #ebdfc5; stroke-width: 1; }
+    .rule { stroke: #dfe4eb; stroke-width: 1; }
   </style>
 
   <rect class="bg" x="0.5" y="0.5" width="1199" height="359" rx="6"/>
