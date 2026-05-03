@@ -32,18 +32,18 @@
       <stop offset="100%" stop-color="#141414" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <path d="M48.0,141.8 L109.3,162.4 L170.7,93.9 L232.0,135.8 L293.3,167.3 L354.7,172.1 L416.0,173.3 L477.3,170.9 L538.7,146.4 L600.0,101.2 L661.3,117.0 L722.7,133.3 L784.0,70.0 L845.3,86.7 L906.7,108.5 L968.0,74.8 L1029.3,93.9 L1090.7,114.2 L1152.0,177.6 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
-  <path class="line" d="M48.0,141.8 L109.3,162.4 L170.7,93.9 L232.0,135.8 L293.3,167.3 L354.7,172.1 L416.0,173.3 L477.3,170.9 L538.7,146.4 L600.0,101.2 L661.3,117.0 L722.7,133.3 L784.0,70.0 L845.3,86.7 L906.7,108.5 L968.0,74.8 L1029.3,93.9 L1090.7,114.2 L1152.0,177.6"/>
+  <path d="M48.0,132.7 L109.3,93.3 L170.7,160.6 L232.0,146.1 L293.3,168.5 L354.7,168.8 L416.0,175.2 L477.3,167.9 L538.7,129.1 L600.0,106.1 L661.3,127.3 L722.7,124.2 L784.0,75.5 L845.3,70.0 L906.7,103.0 L968.0,81.5 L1029.3,91.5 L1090.7,137.6 L1152.0,180.0 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
+  <path class="line" d="M48.0,132.7 L109.3,93.3 L170.7,160.6 L232.0,146.1 L293.3,168.5 L354.7,168.8 L416.0,175.2 L477.3,167.9 L538.7,129.1 L600.0,106.1 L661.3,127.3 L722.7,124.2 L784.0,75.5 L845.3,70.0 L906.7,103.0 L968.0,81.5 L1029.3,91.5 L1090.7,137.6 L1152.0,180.0"/>
 
-  <circle class="dot" cx="784.0" cy="70.0" r="2.5"/>
-  <circle class="dot" cx="968.0" cy="74.8" r="2.5"/>
-  <circle class="dot" cx="1152.0" cy="177.6" r="3.5" stroke="#fcfaf5" stroke-width="2"/>
+  <circle class="dot" cx="845.3" cy="70.0" r="2.5"/>
+  <circle class="dot" cx="784.0" cy="75.5" r="2.5"/>
+  <circle class="dot" cx="1152.0" cy="180.0" r="3.5" stroke="#fcfaf5" stroke-width="2"/>
 
   <!-- X axis -->
   <text x="48" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">DEC</text>
   <text x="232" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">JAN</text>
   <text x="416" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">FEB</text>
-  <text x="600" y="200" class="mono sub-tan" font-size="10" letter-spacing="1" text-anchor="middle">FEB</text>
+  <text x="600" y="200" class="mono sub-tan" font-size="10" letter-spacing="1" text-anchor="middle">MAR</text>
   <text x="784" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">MAR</text>
   <text x="968" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">APR</text>
   <text x="1152" y="200" class="mono sub-tan" font-size="10" letter-spacing="1" text-anchor="end">TODAY</text>
