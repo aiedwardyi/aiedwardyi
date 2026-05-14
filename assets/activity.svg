@@ -17,7 +17,7 @@
 
   <!-- Header -->
   <text x="48" y="44" class="serif ink" font-size="18" font-weight="500">Figure I. <tspan font-style="italic">Contribution activity, since Dec 2025.</tspan></text>
-  <text x="1152" y="44" class="mono muted" font-size="11" letter-spacing="2" text-anchor="end">WEEKLY TOTALS  ·  N = 20</text>
+  <text x="1152" y="44" class="mono muted" font-size="11" letter-spacing="2" text-anchor="end">WEEKLY TOTALS  ·  N = 21</text>
   <line class="rule" x1="48" y1="58" x2="1152" y2="58"/>
 
   <!-- Grid -->
@@ -32,12 +32,12 @@
       <stop offset="100%" stop-color="#141414" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <path d="M48.0,139.5 L106.1,105.8 L164.2,162.6 L222.3,149.1 L280.4,172.7 L338.5,167.8 L396.6,174.8 L454.7,163.7 L512.8,122.7 L570.9,127.6 L629.1,135.4 L687.2,124.0 L745.3,80.1 L803.4,110.5 L861.5,70.0 L919.6,139.0 L977.7,88.2 L1035.8,165.0 L1093.9,154.1 L1152.0,177.7 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
-  <path class="line" d="M48.0,139.5 L106.1,105.8 L164.2,162.6 L222.3,149.1 L280.4,172.7 L338.5,167.8 L396.6,174.8 L454.7,163.7 L512.8,122.7 L570.9,127.6 L629.1,135.4 L687.2,124.0 L745.3,80.1 L803.4,110.5 L861.5,70.0 L919.6,139.0 L977.7,88.2 L1035.8,165.0 L1093.9,154.1 L1152.0,177.7"/>
+  <path d="M48.0,171.7 L103.2,145.6 L158.4,110.4 L213.6,148.1 L268.8,166.4 L324.0,171.7 L379.2,169.5 L434.4,174.7 L489.6,159.9 L544.8,122.0 L600.0,124.7 L655.2,142.6 L710.4,109.7 L765.6,96.6 L820.8,120.2 L876.0,70.0 L931.2,142.1 L986.4,92.6 L1041.6,164.9 L1096.8,154.4 L1152.0,176.5 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
+  <path class="line" d="M48.0,171.7 L103.2,145.6 L158.4,110.4 L213.6,148.1 L268.8,166.4 L324.0,171.7 L379.2,169.5 L434.4,174.7 L489.6,159.9 L544.8,122.0 L600.0,124.7 L655.2,142.6 L710.4,109.7 L765.6,96.6 L820.8,120.2 L876.0,70.0 L931.2,142.1 L986.4,92.6 L1041.6,164.9 L1096.8,154.4 L1152.0,176.5"/>
 
-  <circle class="dot" cx="861.5" cy="70.0" r="2.5"/>
-  <circle class="dot" cx="745.3" cy="80.1" r="2.5"/>
-  <circle class="dot" cx="1152.0" cy="177.7" r="3.5" stroke="#fcfaf5" stroke-width="2"/>
+  <circle class="dot" cx="876.0" cy="70.0" r="2.5"/>
+  <circle class="dot" cx="986.4" cy="92.6" r="2.5"/>
+  <circle class="dot" cx="1152.0" cy="176.5" r="3.5" stroke="#fcfaf5" stroke-width="2"/>
 
   <!-- X axis -->
   <text x="48" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">DEC</text>
