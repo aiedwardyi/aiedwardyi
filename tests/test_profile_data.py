@@ -1,4 +1,8 @@
-from scripts.profile_data import aggregate_weekly, compute_current_streak
+from scripts.profile_data import (
+    aggregate_weekly,
+    compute_current_streak,
+    trim_partial_trailing_week,
+)
 
 
 def _days(*counts):
@@ -64,6 +68,20 @@ def test_aggregate_weekly_empty():
 def test_aggregate_weekly_single_day():
     days = _days(5)
     assert aggregate_weekly(days) == [5]
+
+
+def test_trim_partial_trailing_week_drops_incomplete_tail():
+    # 10 days = 1 full week + 3-day partial. Partial week is dropped.
+    assert trim_partial_trailing_week([7, 3], total_days=10) == [7]
+
+
+def test_trim_partial_trailing_week_keeps_complete_weeks():
+    # 14 days = exactly 2 complete weeks.
+    assert trim_partial_trailing_week([7, 7], total_days=14) == [7, 7]
+
+
+def test_trim_partial_trailing_week_empty():
+    assert trim_partial_trailing_week([], total_days=0) == []
 
 
 def test_streak_ignores_future_dated_days_after_caller_filters():

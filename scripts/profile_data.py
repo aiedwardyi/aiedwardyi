@@ -76,6 +76,27 @@ def compute_current_streak(days: Iterable[dict]) -> int:
     return streak
 
 
+def trim_partial_trailing_week(weekly: list[int], total_days: int) -> list[int]:
+    """Drop the last weekly bucket if it covers fewer than 7 days.
+
+    The activity chart bucketizes contributions into Sun-Sat weeks. On any
+    non-Saturday, the current week is partial and its sum sits visibly below
+    complete weeks - a misleading dip on the chart even when daily output
+    is normal. Trim it so only complete weeks render.
+
+    Args:
+        weekly: Weekly totals as returned by aggregate_weekly.
+        total_days: Number of days that produced the weekly buckets.
+
+    Returns:
+        weekly unchanged if total_days is a multiple of 7, else weekly
+        without its last entry.
+    """
+    if not weekly or total_days % 7 == 0:
+        return weekly
+    return weekly[:-1]
+
+
 def aggregate_weekly(days: Iterable[dict]) -> list[int]:
     """Sum contributions into weekly buckets of 7, oldest week first.
 
@@ -180,6 +201,7 @@ def fetch_full_profile(login: str, token: str) -> dict:
     first_day_idx = first_active_week * 7
     days_active = days[first_day_idx:] if days else []
     weekly_active = weekly_full[first_active_week:] if weekly_full else []
+    weekly_active = trim_partial_trailing_week(weekly_active, len(days_active))
     if days_active:
         activity_start = date.fromisoformat(days_active[0]["date"])
     else:
