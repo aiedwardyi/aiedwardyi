@@ -44,6 +44,11 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 def compute_current_streak(days: Iterable[dict]) -> int:
     """Count consecutive days with count >= 1, walking backward from the last day.
 
+    Today (the last day) is given the benefit of the doubt: if it has zero
+    contributions, it's treated as still in progress rather than breaking the
+    streak. The daily generator runs in the morning user-local, before the
+    day's work has started, so without this we'd report 0 every morning.
+
     Caller must pre-filter out future-dated days. GitHub's contribution calendar
     returns whole Sun-Sat weeks, padding future days with count=0 - those would
     otherwise break the streak immediately on any non-Saturday.
@@ -53,11 +58,18 @@ def compute_current_streak(days: Iterable[dict]) -> int:
             containing only dates up to and including today.
 
     Returns:
-        Integer streak length. Zero if today (the last day) has no contributions.
+        Integer streak length, counting backward from today. If today has zero
+        contributions it is skipped and the count starts from yesterday.
     """
+    days = list(days)
+    if not days:
+        return 0
+    start = len(days) - 1
+    if days[start]["count"] == 0:
+        start -= 1
     streak = 0
-    for day in reversed(list(days)):
-        if day["count"] >= 1:
+    for i in range(start, -1, -1):
+        if days[i]["count"] >= 1:
             streak += 1
         else:
             break
