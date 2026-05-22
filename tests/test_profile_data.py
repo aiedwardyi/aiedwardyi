@@ -9,9 +9,16 @@ def _days(*counts):
     return [{"date": f"2026-01-{i+1:02d}", "count": c} for i, c in enumerate(counts)]
 
 
-def test_streak_is_zero_when_no_contributions_today():
-    # Last day is today and has 0 contributions
+def test_streak_skips_today_when_today_has_zero():
+    # Today (last day) has 0 contributions and is treated as in-progress.
+    # The streak counts backward from yesterday, not from today.
     days = _days(1, 1, 1, 0)
+    assert compute_current_streak(days) == 3
+
+
+def test_streak_is_zero_when_today_and_yesterday_both_have_zero():
+    # Today being in-progress doesn't rescue a genuinely broken streak.
+    days = _days(1, 1, 0, 0)
     assert compute_current_streak(days) == 0
 
 
