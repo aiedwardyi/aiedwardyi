@@ -14,20 +14,11 @@ import requests
 
 GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
 
-_CREATED_AT_QUERY = """
-query($login: String!) {
-  user(login: $login) {
-    createdAt
-  }
-}
-"""
-
 _CONTRIBUTIONS_QUERY = """
 query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
     contributionsCollection(from: $from, to: $to) {
       contributionCalendar {
-        totalContributions
         weeks {
           contributionDays {
             date
@@ -127,11 +118,6 @@ def _post(query: str, variables: dict, token: str) -> dict:
     return payload["data"]
 
 
-def fetch_account_created_at(login: str, token: str) -> datetime:
-    data = _post(_CREATED_AT_QUERY, {"login": login}, token)
-    return datetime.fromisoformat(data["user"]["createdAt"].replace("Z", "+00:00"))
-
-
 def fetch_year_window(login: str, token: str, from_dt: datetime, to_dt: datetime) -> dict:
     """Fetch one contribution calendar window (max ~1 year per GraphQL spec)."""
     data = _post(
@@ -163,8 +149,6 @@ def fetch_full_profile(login: str, token: str) -> dict:
 
     Returns:
         {
-          'total_contributions': int,       # full lifetime total
-          'created_at': datetime,           # account creation (UTC)
           'days_active': list[{date,count}], # trimmed, ordered oldest->newest, <= today
           'current_streak': int,
           'weekly_active': list[int],       # weekly totals from first active week
@@ -173,19 +157,6 @@ def fetch_full_profile(login: str, token: str) -> dict:
     """
     now = datetime.now(timezone.utc)
     today_iso = now.date().isoformat()
-    created_at = fetch_account_created_at(login, token)
-
-    # Lifetime total: sum contributionCalendar.totalContributions across each year window
-    lifetime_total = 0
-    for year in range(created_at.year, now.year + 1):
-        window_from = datetime(year, 1, 1, tzinfo=timezone.utc)
-        window_to = datetime(year, 12, 31, 23, 59, 59, tzinfo=timezone.utc)
-        if window_from < created_at:
-            window_from = created_at
-        if window_to > now:
-            window_to = now
-        cal = fetch_year_window(login, token, window_from, window_to)
-        lifetime_total += cal["totalContributions"]
 
     # Trailing 12 months for streak + weekly graph. timedelta (not replace(year=...))
     # so Feb 29 doesn't crash.
@@ -208,8 +179,6 @@ def fetch_full_profile(login: str, token: str) -> dict:
         activity_start = now.date()
 
     return {
-        "total_contributions": lifetime_total,
-        "created_at": created_at,
         "days_active": days_active,
         "current_streak": compute_current_streak(days_active),
         "weekly_active": weekly_active,

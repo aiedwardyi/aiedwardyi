@@ -73,21 +73,17 @@ HERO_TEMPLATE = Template("""<svg xmlns="http://www.w3.org/2000/svg" width="1200"
   <!-- Abstract body, two lines -->
   <text class="serif ink" x="48" y="254" font-size="16" font-style="italic">
     <tspan x="48" dy="0">Building systems where agents ship real work into production.</tspan>
-    <tspan x="48" dy="22">Previously led a 90-dev org shipping 200+ products.</tspan>
+    <tspan x="48" dy="22">9 years leading client delivery and dev teams.</tspan>
   </text>
 
   <!-- Right column: stats -->
   <line class="rule" x1="780" y1="100" x2="780" y2="300"/>
 
-  <text class="mono ink" x="812" y="128" font-size="11" letter-spacing="2.5" opacity="0.7">CONTRIBUTIONS</text>
-  <text class="serif ink" x="812" y="192" font-size="54" font-weight="500" letter-spacing="-1.2">$contributions_total</text>
-  <text class="mono sub-tan" x="812" y="214" font-size="11">since $created_year</text>
-
-  <text class="mono ink" x="984" y="128" font-size="11" letter-spacing="2.5" opacity="0.7">DAY STREAK</text>
-  <text x="984" y="192">
+  <text class="mono ink" x="966" y="128" font-size="11" letter-spacing="2.5" opacity="0.7" text-anchor="middle">DAY STREAK</text>
+  <text x="966" y="192" text-anchor="middle">
     <tspan class="serif ink" font-size="54" font-weight="500" letter-spacing="-1.2">$streak</tspan><tspan class="mono muted" font-size="14" dy="-20" dx="4">d</tspan>
   </text>
-  <text class="mono sub-tan" x="984" y="214" font-size="11">current</text>
+  <text class="mono sub-tan" x="966" y="214" font-size="11" text-anchor="middle">current</text>
 </svg>
 """)
 
@@ -220,9 +216,7 @@ def _since_label(start: date) -> str:
 
 def render_hero(
     *,
-    contributions_total: int,
     streak: int,
-    created_year: int,
     theme: dict = CREAM,
     now: datetime | None = None,
 ) -> str:
@@ -231,9 +225,7 @@ def render_hero(
     return HERO_TEMPLATE.substitute(
         **theme,
         dateline=dateline,
-        contributions_total=f"{contributions_total:,}",
         streak=str(streak),
-        created_year=str(created_year),
     )
 
 

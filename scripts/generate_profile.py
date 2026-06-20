@@ -27,15 +27,11 @@ def main() -> int:
 
     variants = {
         "hero.svg": render_hero(
-            contributions_total=profile["total_contributions"],
             streak=profile["current_streak"],
-            created_year=profile["created_at"].year,
             theme=CREAM,
         ),
         "hero-dark.svg": render_hero(
-            contributions_total=profile["total_contributions"],
             streak=profile["current_streak"],
-            created_year=profile["created_at"].year,
             theme=CHARCOAL,
         ),
         "activity.svg": render_activity(

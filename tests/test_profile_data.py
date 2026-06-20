@@ -1,3 +1,7 @@
+from datetime import datetime, timezone
+
+import scripts.profile_data as profile_data
+
 from scripts.profile_data import (
     aggregate_weekly,
     compute_current_streak,
@@ -96,3 +100,42 @@ def test_streak_ignores_future_dated_days_after_caller_filters():
     # Correct behavior (caller filters to <= today): streak is 4
     through_today = full_week[:4]
     assert compute_current_streak(through_today) == 4
+
+
+def test_fetch_full_profile_uses_only_trailing_year_window(monkeypatch):
+    now = datetime(2026, 6, 20, 12, 0, tzinfo=timezone.utc)
+    calls = []
+    calendar = {
+        "weeks": [
+            {
+                "contributionDays": [
+                    {"date": "2026-06-18", "contributionCount": 1},
+                    {"date": "2026-06-19", "contributionCount": 2},
+                    {"date": "2026-06-20", "contributionCount": 3},
+                ]
+            }
+        ],
+    }
+
+    class FixedDateTime(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now
+
+    def fake_fetch_year_window(login, token, from_dt, to_dt):
+        calls.append((login, token, from_dt, to_dt))
+        return calendar
+
+    monkeypatch.setattr(profile_data, "datetime", FixedDateTime)
+    monkeypatch.setattr(profile_data, "fetch_year_window", fake_fetch_year_window)
+
+    result = profile_data.fetch_full_profile("aiedwardyi", "token")
+
+    assert "total" + "Contributions" not in profile_data._CONTRIBUTIONS_QUERY
+    assert len(calls) == 1
+    assert calls[0][2] == now - profile_data.timedelta(days=365)
+    assert calls[0][3] == now
+    assert "total" + "_contributions" not in result
+    assert "created" + "_at" not in result
+    assert result["current_streak"] == 3
+    assert result["weekly_active"] == []
