@@ -17,7 +17,7 @@
 
   <!-- Header -->
   <text x="48" y="44" class="serif ink" font-size="18" font-weight="500">Figure I. <tspan font-style="italic">Contribution activity, since Dec 2025.</tspan></text>
-  <text x="1152" y="44" class="mono muted" font-size="11" letter-spacing="2" text-anchor="end">WEEKLY TOTALS  ·  N = 26</text>
+  <text x="1152" y="44" class="mono muted" font-size="11" letter-spacing="2" text-anchor="end">WEEKLY TOTALS  ·  N = 27</text>
   <line class="rule" x1="48" y1="58" x2="1152" y2="58"/>
 
   <!-- Grid -->
@@ -32,19 +32,19 @@
       <stop offset="100%" stop-color="#dfe4eb" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <path d="M48.0,139.5 L92.2,105.8 L136.3,162.6 L180.5,149.1 L224.6,172.7 L268.8,167.8 L313.0,174.8 L357.1,163.7 L401.3,122.7 L445.4,127.6 L489.6,135.4 L533.8,124.0 L577.9,80.1 L622.1,110.5 L666.2,70.0 L710.4,139.3 L754.6,122.9 L798.7,165.5 L842.9,154.1 L887.0,90.2 L931.2,165.0 L975.4,163.1 L1019.5,165.7 L1063.7,154.1 L1107.8,157.2 L1152.0,170.9 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
-  <path class="line" d="M48.0,139.5 L92.2,105.8 L136.3,162.6 L180.5,149.1 L224.6,172.7 L268.8,167.8 L313.0,174.8 L357.1,163.7 L401.3,122.7 L445.4,127.6 L489.6,135.4 L533.8,124.0 L577.9,80.1 L622.1,110.5 L666.2,70.0 L710.4,139.3 L754.6,122.9 L798.7,165.5 L842.9,154.1 L887.0,90.2 L931.2,165.0 L975.4,163.1 L1019.5,165.7 L1063.7,154.1 L1107.8,157.2 L1152.0,170.9"/>
+  <path d="M48.0,171.7 L90.5,145.6 L132.9,110.4 L175.4,148.1 L217.8,166.4 L260.3,171.7 L302.8,169.5 L345.2,174.7 L387.7,159.9 L430.2,122.0 L472.6,124.7 L515.1,142.6 L557.5,109.7 L600.0,96.6 L642.5,120.2 L684.9,70.0 L727.4,142.6 L769.8,126.0 L812.3,165.4 L854.8,154.4 L897.2,92.6 L939.7,162.7 L982.2,164.9 L1024.6,167.2 L1067.1,152.4 L1109.5,159.4 L1152.0,171.0 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
+  <path class="line" d="M48.0,171.7 L90.5,145.6 L132.9,110.4 L175.4,148.1 L217.8,166.4 L260.3,171.7 L302.8,169.5 L345.2,174.7 L387.7,159.9 L430.2,122.0 L472.6,124.7 L515.1,142.6 L557.5,109.7 L600.0,96.6 L642.5,120.2 L684.9,70.0 L727.4,142.6 L769.8,126.0 L812.3,165.4 L854.8,154.4 L897.2,92.6 L939.7,162.7 L982.2,164.9 L1024.6,167.2 L1067.1,152.4 L1109.5,159.4 L1152.0,171.0"/>
 
-  <circle class="dot" cx="666.2" cy="70.0" r="2.5"/>
-  <circle class="dot" cx="577.9" cy="80.1" r="2.5"/>
-  <circle class="dot" cx="1152.0" cy="170.9" r="3.5" stroke="#0a0d13" stroke-width="2"/>
+  <circle class="dot" cx="684.9" cy="70.0" r="2.5"/>
+  <circle class="dot" cx="897.2" cy="92.6" r="2.5"/>
+  <circle class="dot" cx="1152.0" cy="171.0" r="3.5" stroke="#0a0d13" stroke-width="2"/>
 
   <!-- X axis -->
   <text x="48" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">DEC</text>
   <text x="232" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">JAN</text>
-  <text x="416" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">MAR</text>
+  <text x="416" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">FEB</text>
   <text x="600" y="200" class="mono sub-tan" font-size="10" letter-spacing="1" text-anchor="middle">MAR</text>
-  <text x="784" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">MAY</text>
+  <text x="784" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">APR</text>
   <text x="968" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">MAY</text>
   <text x="1152" y="200" class="mono sub-tan" font-size="10" letter-spacing="1" text-anchor="end">TODAY</text>
 </svg>
