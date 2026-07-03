@@ -32,12 +32,12 @@
       <stop offset="100%" stop-color="#141414" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <path d="M48.0,171.7 L90.5,145.6 L132.9,110.4 L175.4,148.1 L217.8,166.4 L260.3,171.7 L302.8,169.5 L345.2,174.7 L387.7,159.9 L430.2,122.0 L472.6,124.7 L515.1,142.6 L557.5,109.7 L600.0,96.6 L642.5,120.2 L684.9,70.0 L727.4,142.6 L769.8,126.0 L812.3,165.4 L854.8,154.4 L897.2,92.6 L939.7,162.7 L982.2,164.9 L1024.6,167.2 L1067.1,152.4 L1109.5,159.4 L1152.0,171.0 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
-  <path class="line" d="M48.0,171.7 L90.5,145.6 L132.9,110.4 L175.4,148.1 L217.8,166.4 L260.3,171.7 L302.8,169.5 L345.2,174.7 L387.7,159.9 L430.2,122.0 L472.6,124.7 L515.1,142.6 L557.5,109.7 L600.0,96.6 L642.5,120.2 L684.9,70.0 L727.4,142.6 L769.8,126.0 L812.3,165.4 L854.8,154.4 L897.2,92.6 L939.7,162.7 L982.2,164.9 L1024.6,167.2 L1067.1,152.4 L1109.5,159.4 L1152.0,171.0"/>
+  <path d="M48.0,152.2 L90.5,158.6 L132.9,107.7 L175.4,147.1 L217.8,158.9 L260.3,173.0 L302.8,174.4 L345.2,173.8 L387.7,156.4 L430.2,106.4 L472.6,126.5 L515.1,144.7 L557.5,102.1 L600.0,87.4 L642.5,113.1 L684.9,70.0 L727.4,146.5 L769.8,120.3 L812.3,163.9 L854.8,153.8 L897.2,87.9 L939.7,160.5 L982.2,163.7 L1024.6,168.2 L1067.1,147.9 L1109.5,161.0 L1152.0,163.9 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
+  <path class="line" d="M48.0,152.2 L90.5,158.6 L132.9,107.7 L175.4,147.1 L217.8,158.9 L260.3,173.0 L302.8,174.4 L345.2,173.8 L387.7,156.4 L430.2,106.4 L472.6,126.5 L515.1,144.7 L557.5,102.1 L600.0,87.4 L642.5,113.1 L684.9,70.0 L727.4,146.5 L769.8,120.3 L812.3,163.9 L854.8,153.8 L897.2,87.9 L939.7,160.5 L982.2,163.7 L1024.6,168.2 L1067.1,147.9 L1109.5,161.0 L1152.0,163.9"/>
 
   <circle class="dot" cx="684.9" cy="70.0" r="2.5"/>
-  <circle class="dot" cx="897.2" cy="92.6" r="2.5"/>
-  <circle class="dot" cx="1152.0" cy="171.0" r="3.5" stroke="#fcfaf5" stroke-width="2"/>
+  <circle class="dot" cx="600.0" cy="87.4" r="2.5"/>
+  <circle class="dot" cx="1152.0" cy="163.9" r="3.5" stroke="#fcfaf5" stroke-width="2"/>
 
   <!-- X axis -->
   <text x="48" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">DEC</text>
@@ -45,6 +45,6 @@
   <text x="416" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">FEB</text>
   <text x="600" y="200" class="mono sub-tan" font-size="10" letter-spacing="1" text-anchor="middle">MAR</text>
   <text x="784" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">APR</text>
-  <text x="968" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">MAY</text>
+  <text x="968" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">JUN</text>
   <text x="1152" y="200" class="mono sub-tan" font-size="10" letter-spacing="1" text-anchor="end">TODAY</text>
 </svg>
