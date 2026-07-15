@@ -100,7 +100,8 @@ HERO_TEMPLATE = Template("""<svg xmlns="http://www.w3.org/2000/svg" width="1200"
   <text class="mono muted" x="48" y="112" font-size="11" letter-spacing="2.5">AI ENGINEER  ·  FOUNDER</text>
   <text class="serif ink" x="48" y="184" font-size="64" font-weight="500" letter-spacing="-0.8">Edward Yi</text>
 
-  <!-- Name seal, stamped after the signature -->
+  <!-- Name seal, stamped after the signature. x=352 hugs the rendered width
+       of "Edward Yi" at 64px serif; reposition if the name text changes. -->
   <g transform="translate(352,138.5) scale(0.5) rotate(-3 50 50)">
     <rect x="9" y="9" width="82" height="82" rx="7" fill="$seal"/>
     <rect x="17" y="17" width="66" height="66" rx="3" fill="none" stroke="$seal_negative" stroke-opacity="0.5" stroke-width="2.5"/>
