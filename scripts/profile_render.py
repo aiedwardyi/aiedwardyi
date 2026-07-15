@@ -20,6 +20,9 @@ CREAM = {
     "tan": "#94876a",
     "sub_tan": "#80735a",
     "dot": "#c94a2a",
+    # Seal colors mirror edwardyi.dev (--seal / --seal-negative).
+    "seal": "#c03a2b",
+    "seal_negative": "#f6efe0",
     "grid_opacity": "0.06",
     "area_top_opacity": "0.18",
     "marker_ring": "#fcfaf5",
@@ -27,7 +30,7 @@ CREAM = {
 
 # Charcoal: cool deep graphite for dark mode. Sits deeper than GitHub's
 # canvas (#0d1117) so the card reads as a distinct slab. Cool neutral
-# palette; the warm red dot is the only intentional pop of heat.
+# palette; warm red - the dot and the seal - is the only intentional heat.
 CHARCOAL = {
     "bg": "#0a0d13",
     "border": "#1d2129",
@@ -36,10 +39,38 @@ CHARCOAL = {
     "tan": "#9aa1ac",
     "sub_tan": "#6d7480",
     "dot": "#e87252",
+    "seal": "#c8473a",
+    "seal_negative": "#14110e",
     "grid_opacity": "0.12",
     "area_top_opacity": "0.20",
     "marker_ring": "#0a0d13",
 }
+
+
+# 674E (Yi) from Shippori Mincho 600, vendored as an outline: GitHub renders
+# README SVGs in <img> context where webfonts can't load, and a raw <text>
+# glyph would vary by OS or show tofu. Drawn at font-size 44 in the seal's
+# 100x100 box, bbox-centered at (50, 53).
+_SEAL_GLYPH = (
+    "M63.4 37.7Q63.6 37.4 63.9 37.1Q64.2 36.7 64.4 36.4Q64.7 36.1 64.9 36.1"
+    "Q65.1 36.1 66.2 36.9Q67.2 37.7 68.2 38.7Q69.1 39.6 69.1 39.9Q69 40.6 68 40.6"
+    "H53.6Q56.2 43.5 60.8 45.7Q65.3 48 70 49.3L69.9 49.7Q67.6 50.2 66.7 53.4"
+    "Q62.2 51.2 58.4 47.9Q54.6 44.6 52.4 40.6H51.9V43.8Q52 47.8 52.2 50"
+    "Q51.9 50.5 50.8 50.9Q49.7 51.4 48.6 51.4Q48.1 51.4 47.9 51.1Q47.6 50.8 47.6 50.5"
+    "Q47.8 48.7 47.9 45.9V43.1Q44.7 46.5 40.2 49.3Q35.7 52 30.4 53.9L30 53.3"
+    "Q34.4 51 38.3 47.6Q42.2 44.2 44.9 40.6H38.4Q35.3 40.6 31.8 41.2L30.6 39"
+    "Q33.1 39.2 36.5 39.3H47.9Q47.9 35.1 47.4 32.5Q50.6 33.2 51.8 33.7Q53 34.1 53 34.4"
+    "Q53 34.7 52.6 34.9L51.9 35.4V39.3H62.3ZM57.9 51.8Q58.1 51.6 58.5 51.1"
+    "Q59 50.7 59.2 50.7Q59.5 50.7 60.4 51.4Q61.3 52.2 62 53.1Q62.8 54 62.8 54.3"
+    "Q62.5 54.5 62.1 54.6Q61.8 54.7 61.1 54.7Q59.7 55.5 57.6 56.4Q55.5 57.2 53.3 57.9"
+    "Q53.2 58.2 52.9 58.4Q52.6 58.6 51.9 58.8V61H63L64 59.5Q64.2 59.2 64.5 58.8"
+    "Q64.8 58.3 65 58.1Q65.3 57.9 65.4 57.9Q65.7 57.9 66.8 58.7Q67.8 59.5 68.7 60.4"
+    "Q69.7 61.3 69.7 61.6Q69.5 62.3 68.5 62.3H51.9V68.4Q51.9 70.1 51.5 71.1"
+    "Q51.1 72.1 49.9 72.7Q48.7 73.3 46.3 73.5Q46.2 71.6 45.3 70.7Q44.8 70.2 44 69.9"
+    "Q43.1 69.5 41.6 69.3V68.7Q46.3 69 47.1 69Q47.5 69 47.7 68.8Q47.9 68.7 47.9 68.2"
+    "V62.3H37.8Q34.7 62.3 31.2 62.9L30.1 60.7Q32.5 60.9 36 61H47.9Q47.9 58.4 47.7 56.9"
+    "L52 57.5Q54.3 56 56.2 54.1H45.2Q42.1 54.1 38.6 54.7L37.5 52.5Q39.9 52.7 43.4 52.8H57Z"
+)
 
 
 HERO_TEMPLATE = Template("""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="hero-title">
@@ -68,6 +99,15 @@ HERO_TEMPLATE = Template("""<svg xmlns="http://www.w3.org/2000/svg" width="1200"
   <!-- Left column: byline, name, abstract -->
   <text class="mono muted" x="48" y="112" font-size="11" letter-spacing="2.5">AI ENGINEER  ·  FOUNDER</text>
   <text class="serif ink" x="48" y="184" font-size="64" font-weight="500" letter-spacing="-0.8">Edward Yi</text>
+
+  <!-- Name seal, stamped after the signature. x=352 hugs the rendered width
+       of "Edward Yi" at 64px serif; reposition if the name text changes. -->
+  <g transform="translate(352,138.5) scale(0.5) rotate(-3 50 50)">
+    <rect x="9" y="9" width="82" height="82" rx="7" fill="$seal"/>
+    <rect x="17" y="17" width="66" height="66" rx="3" fill="none" stroke="$seal_negative" stroke-opacity="0.5" stroke-width="2.5"/>
+    <path d="$seal_glyph" fill="$seal_negative"/>
+  </g>
+
   <text class="mono tan" x="48" y="224" font-size="11" letter-spacing="2.5">ABSTRACT</text>
 
   <!-- Abstract body, two lines -->
@@ -226,6 +266,7 @@ def render_hero(
         **theme,
         dateline=dateline,
         streak=str(streak),
+        seal_glyph=_SEAL_GLYPH,
     )
 
 
