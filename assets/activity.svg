@@ -32,19 +32,19 @@
       <stop offset="100%" stop-color="#141414" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <path d="M48.0,152.2 L83.6,158.6 L119.2,107.7 L154.8,147.1 L190.5,158.9 L226.1,173.0 L261.7,174.4 L297.3,173.8 L332.9,156.4 L368.5,106.4 L404.1,126.5 L439.7,144.7 L475.4,102.1 L511.0,87.4 L546.6,113.1 L582.2,70.0 L617.8,146.5 L653.4,121.4 L689.0,165.3 L724.6,153.8 L760.3,90.3 L795.9,160.5 L831.5,163.7 L867.1,168.2 L902.7,148.2 L938.3,162.1 L973.9,163.9 L1009.5,139.3 L1045.2,147.6 L1080.8,156.4 L1116.4,159.7 L1152.0,152.4 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
-  <path class="line" d="M48.0,152.2 L83.6,158.6 L119.2,107.7 L154.8,147.1 L190.5,158.9 L226.1,173.0 L261.7,174.4 L297.3,173.8 L332.9,156.4 L368.5,106.4 L404.1,126.5 L439.7,144.7 L475.4,102.1 L511.0,87.4 L546.6,113.1 L582.2,70.0 L617.8,146.5 L653.4,121.4 L689.0,165.3 L724.6,153.8 L760.3,90.3 L795.9,160.5 L831.5,163.7 L867.1,168.2 L902.7,148.2 L938.3,162.1 L973.9,163.9 L1009.5,139.3 L1045.2,147.6 L1080.8,156.4 L1116.4,159.7 L1152.0,152.4"/>
+  <path d="M48.0,141.8 L83.6,162.4 L119.2,93.9 L154.8,135.8 L190.5,167.3 L226.1,172.1 L261.7,173.3 L297.3,170.9 L332.9,146.4 L368.5,101.2 L404.1,117.0 L439.7,133.3 L475.4,70.0 L511.0,86.7 L546.6,108.5 L582.2,75.2 L617.8,134.5 L653.4,116.4 L689.0,164.8 L724.6,149.7 L760.3,80.6 L795.9,159.4 L831.5,159.7 L867.1,168.5 L902.7,143.3 L938.3,160.6 L973.9,157.0 L1009.5,134.5 L1045.2,142.4 L1080.8,153.0 L1116.4,153.6 L1152.0,156.4 L1152.0,180 L48.0,180 Z" fill="url(#inkFill)"/>
+  <path class="line" d="M48.0,141.8 L83.6,162.4 L119.2,93.9 L154.8,135.8 L190.5,167.3 L226.1,172.1 L261.7,173.3 L297.3,170.9 L332.9,146.4 L368.5,101.2 L404.1,117.0 L439.7,133.3 L475.4,70.0 L511.0,86.7 L546.6,108.5 L582.2,75.2 L617.8,134.5 L653.4,116.4 L689.0,164.8 L724.6,149.7 L760.3,80.6 L795.9,159.4 L831.5,159.7 L867.1,168.5 L902.7,143.3 L938.3,160.6 L973.9,157.0 L1009.5,134.5 L1045.2,142.4 L1080.8,153.0 L1116.4,153.6 L1152.0,156.4"/>
 
-  <circle class="dot" cx="582.2" cy="70.0" r="2.5"/>
-  <circle class="dot" cx="511.0" cy="87.4" r="2.5"/>
-  <circle class="dot" cx="1152.0" cy="152.4" r="3.5" stroke="#fcfaf5" stroke-width="2"/>
+  <circle class="dot" cx="475.4" cy="70.0" r="2.5"/>
+  <circle class="dot" cx="582.2" cy="75.2" r="2.5"/>
+  <circle class="dot" cx="1152.0" cy="156.4" r="3.5" stroke="#fcfaf5" stroke-width="2"/>
 
   <!-- X axis -->
   <text x="48" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">DEC</text>
-  <text x="232" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">JAN</text>
+  <text x="232" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">FEB</text>
   <text x="416" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">MAR</text>
   <text x="600" y="200" class="mono sub-tan" font-size="10" letter-spacing="1" text-anchor="middle">APR</text>
   <text x="784" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">MAY</text>
-  <text x="968" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">JUN</text>
+  <text x="968" y="200" class="mono sub-tan" font-size="10" letter-spacing="1">JUL</text>
   <text x="1152" y="200" class="mono sub-tan" font-size="10" letter-spacing="1" text-anchor="end">TODAY</text>
 </svg>
